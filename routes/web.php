@@ -12,5 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/log','Controller@login');
+
+Route::get('home', function () {
+    return view('base');
+});
+
+Route::get('login', function () {
+    return view('buyer.login');
+});
+
+Route::get('register', function () {
+    return view('buyer.register');
+});
+Route::get('listing', function () {
+    return view('base');
 });
