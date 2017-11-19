@@ -232,7 +232,7 @@ body{
     display: block;
     margin: 0 0 15px 15px;
     font: 400 13px 'Open Sans',sans-serif;
-    
+
 }
 
 .s-submit select{
@@ -247,6 +247,21 @@ body{
     right:25px!important;
 }
 
+input.pass-style
+{
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  font: 400 13px 'Open Sans',sans-serif;
+  border: 1px solid #eeeeee;
+  color:#444;
+  background: #f7f7f7!important;
+  text-transform: none;
+  border-radius: 30px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  height:46px;
+}
 .s-submit input[type='text']{
     display: block;
     width: 100%;
@@ -296,7 +311,7 @@ body{
 
 .s-submit input[type='checkbox'],.s-submit input[type='radio']{
     visibility: hidden;
-    position: absolute; 
+    position: absolute;
 }
 
 label.s-submitCheckLabel{

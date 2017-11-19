@@ -15,13 +15,16 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::post('client-register',"RegisterController@RegisterClient")->name("client-register");
+Route::post('/log','Controller@login');
 Route::get('/log','Controller@login');
 
 Route::get('home', function () {
     return view('base');
 });
 
-Route::get('login', function () {
+Route::get('buyer-login', function () {
     return view('buyer.login');
 });
 

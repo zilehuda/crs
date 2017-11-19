@@ -78,6 +78,7 @@
 							</div>
 							<div class="collapse navbar-collapse navbar-main-slide" id="nav">
 								<ul class="navbar-nav-menu">
+									<li><a href="login">Home</a></li>
 									<li class="dropdown">
 										<a class="dropdown-toggle" data-toggle='dropdown' href="home.html">Home <span class="fa fa-caret-down"></span></a>
 										<ul class="dropdown-menu h-nav">

@@ -55,38 +55,60 @@
 					<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
 						<h2 class="">CLIENT REGISTERATION</h2>
 					</header>
-					<form class="s-submit clearfix" action="submit2.html" method="POST">
+					<form class="s-submit clearfix" action="{{ route('client-register') }}" method="POST">
+						{{ csrf_field() }}
 						<div class="row">
 							<div class="col-md-6 col-xs-12">
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
-									<label>Enter Engine Capacity <span>*</span></label>
-									<input placeholder="Enter Capacity" type="text" name="input1" />
+									<label>Full Name <span>*</span></label>
+									<input placeholder="NAME" type="text" name="fname" />
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
-									<label>Enter Engine Capacity <span>*</span></label>
-									<input placeholder="Enter Capacity" type="text" name="input1" />
+									<label>Email Address <span>*</span></label>
+									<input placeholder="john@example.com" type="text" name="email" />
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
-									<label>Enter Engine Capacity <span>*</span></label>
-									<input placeholder="Enter Capacity" type="text" name="input1" />
+									<label>Phone Number<span>*</span></label>
+									<input placeholder="0321-1234567" type="text" name="phone" />
+								</div>
+								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
+									<label>City<span>*</span></label>
+									<input placeholder="Karachi" type="text" name="city" />
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12">
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
-									<label>Enter VIN/Chassis Number <span>*</span></label>
-									<input placeholder="Enter Number" type="text"  name="input2" />
+									<label>Gender<span>*</span></label>
+									<div class='s-relative'>
+										<select class="m-select" name="gender">
+											<option>Male</option>
+											<option>Female</option>
+										</select>
+										<span class="fa fa-caret-down"></span>
+									</div>
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
-									<label>Enter Engine Capacity <span>*</span></label>
-									<input placeholder="Enter Capacity" type="text" name="input1" />
+									<label >Password <span>*</span></label>
+									<input style="display: block;
+								  width: 100%;
+								  padding: 15px 20px;
+								  font: 400 13px 'Open Sans',sans-serif;
+								  border: 1px solid #eeeeee;
+								  color:#444;
+								  background: #f7f7f7!important;
+								  text-transform: none;
+								  border-radius: 30px;
+								  padding-top: 13px;
+								  padding-bottom: 13px;
+								  height:46px;" placeholder="*******" type="password" name="pwd" />
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
-									<label>Enter Engine Capacity <span>*</span></label>
-									<input placeholder="Enter Capacity" type="text" name="input1" />
+									<label>NIC<span>*</span></label>
+									<input placeholder="xxxxxxxxx" type="text" name="nic" />
 								</div>
 							</div>
 						</div>
-						<button type="submit" class="btn m-btn pull-right wow zoomInUp" data-wow-delay="0.5s">Save &amp; PROCEED to next step<span class="fa fa-angle-right"></span></button>
+						<button type="submit" class="btn m-btn pull-right wow zoomInUp" data-wow-delay="0.5s">REGISTER<span class="fa fa-angle-right"></span></button>
 					</form>
 				</div>
 			</div>
