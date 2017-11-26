@@ -13,11 +13,14 @@
 
 Route::get('/', function () {
     return view('home');
-})->name('home');
+});
 
 Route::group(["prefix"=>"client"],function(){
   Route::post('login', 'Auth\ClientLoginController@login')->name('client.login.submit');
   Route::get('login', 'Auth\ClientLoginController@showLoginForm')->name('client.login');
+  Route::get('status', function(){
+    return view('status');
+  })->name('client.login');
   Route::get('/', 'ClientController@index')->name('client.dashboard');
 });
 
@@ -29,9 +32,8 @@ Route::group(["prefix"=>"owner"],function(){
 });
 
 Route::get('logout', 'Controller@logout')->name('logout');
-Route::get('available-cars', function () {
-    return view('listing');
-});
+Route::get('available-cars', 'CarsController@GetCarList');
+Route::get('single-car/{id}', 'CarsController@GetSingleCar')->name('single.car');
 Route::post('client-register',"RegisterController@RegisterClient")->name("client-register");
 //Route::post('/log','Controller@login');
 

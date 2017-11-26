@@ -66,32 +66,33 @@
 				<div class="row">
 					<div class="col-lg-9 col-sm-8 col-xs-12">
 						<div class="b-items__cars">
+							@foreach ($cars as $car)
 							<div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
 								<div class="b-items__cars-one-img">
 									<img src="media/270x230/nissanList.jpg" alt="nissan" />
 								</div>
 								<div class="b-items__cars-one-info">
 									<header class="b-items__cars-one-info-header s-lineDownLeft">
-										<h2>2016 Nissan Maxima</h2>
-										<span>$32,115</span>
+										<h2>{{ $car->car_name }}</h2>
+										<span>{{ $car->hire_cost }} / day</span>
 									</header>
 									<p>
 										Once billed as the "four-door sports car," the Maxima has grown bigger and heavier over the decades, detracting from its appeal. The current generation
 									</p>
 									<div class="b-items__cars-one-info-km">
-										<span class="fa fa-tachometer"></span> 35,000 KM
+										<span class="fa fa-tachometer"></span> {{ $car->mileage }} KM
 									</div>
 									<div class="b-items__cars-one-info-details">
 										<div class="b-featured__item-links">
-											<a href="#">Registered 2015</a>
-											<a href="#">Used</a>
-											<a href="#">7-Speed Automatic</a>
-											<a href="#">Petrol</a>
+											<a href="#">manufacture year: {{ $car->manu_year }}</a>
+											<a >{{ $car->fuel_type }}</a>
 										</div>
-										<a href="detail.html" class="btn m-btn">VIEW DETAILS<span class="fa fa-angle-right"></span></a>
+										<a href="{{ route('single.car', $car->car_id) }}" class="btn m-btn">VIEW DETAILS<span class="fa fa-angle-right"></span></a>
 									</div>
 								</div>
 							</div>
+							@endforeach
+
 						</div>
 						<div class="b-items__pagination wow zoomInUp" data-wow-delay="0.5s">
 							<div class="b-items__pagination-main">
