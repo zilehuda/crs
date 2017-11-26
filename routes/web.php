@@ -38,7 +38,7 @@ Route::post('client-register',"RegisterController@RegisterClient")->name("client
 
 
 
-Route::get('register', function () {
+Route::get('register',function () {
     return view('buyer.register');
 });
 Route::get('listing', function () {
