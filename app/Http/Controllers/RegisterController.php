@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\client;
+use Illuminate\Support\Facades\Hash;
 class RegisterController extends Controller
 {
   public function __construct()
@@ -17,7 +18,7 @@ class RegisterController extends Controller
       return client::create([
           'fname' => $req->fname,
           'email' => $req->email,
-          'pwd' => $req->pwd,
+          'password' =>  Hash::make($req->pwd),
           'nic' => $req->nic,
           'phone' => $req->phone,
           'city' => $req->city,

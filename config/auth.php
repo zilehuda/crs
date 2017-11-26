@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'client',
         'passwords' => 'users',
     ],
 
@@ -49,6 +49,10 @@ return [
             'driver' => 'session',
             'provider' => 'client',
         ],
+        'owner' => [
+            'driver' => 'session',
+            'provider' => 'owner',
+        ],
     ],
 
     /*
@@ -76,6 +80,10 @@ return [
         'client' => [
             'driver' => 'eloquent',
             'model' => App\client::class,
+        ],
+        'owner' => [
+            'driver' => 'eloquent',
+            'model' => App\Owner::class,
         ],
 
         // 'users' => [

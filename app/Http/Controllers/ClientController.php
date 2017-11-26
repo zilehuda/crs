@@ -6,11 +6,21 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    //
+  public function __construct()
+  {
+      $this->middleware('auth:client');
+  }
 
-    public function __construct($value='')
-    {
-      # code...
-      $this->middleware("auth");
-    }
+  function index()
+  {
+
+
+    return view('home');
+  }
+  public function FormSubmit(test $request)
+  {
+
+    dd($request->field_);
+
+ }
 }

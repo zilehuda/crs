@@ -5,19 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Auto Club</title>
 
-		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}" />
 
-		<link href="css/master.css" rel="stylesheet">
+		<link href="{{ asset('css/master.css') }}" rel="stylesheet">
 
 		<!-- SWITCHER -->
-		<link rel="stylesheet" id="switcher-css" type="text/css" href="assets/switcher/css/switcher.css" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color1.css" title="color1" media="all" data-default-color="true" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color2.css" title="color2" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color3.css" title="color3" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color4.css" title="color4" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color5.css" title="color5" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color6.css" title="color6" media="all" />
-
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="{{ asset('assets/switcher/css/switcher.css') }}" media="all" />
 		<!--[if lt IE 9]>
 		<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -47,9 +40,15 @@
 					<div class="col-md-6 col-xs-6">
 						<nav class="b-topBar__nav">
 							<ul>
+								@if (Auth::guest())
 								<li><a href="#">REGISTER</a></li>
 								<li><a href="#">LOGIN AS BUYER</a></li>
 								<li><a href="#">LOGIN AS SELLER</a></li>
+								@elseif (Auth::guard('client')->check())
+								<li><a href="{{ route('logout') }}">LOGOUT</a></li>
+								<li><a href="#">{{ Auth::user()->fname }}</a></li>
+
+								@endif
 							</ul>
 						</nav>
 					</div>
@@ -78,36 +77,19 @@
 							</div>
 							<div class="collapse navbar-collapse navbar-main-slide" id="nav">
 								<ul class="navbar-nav-menu">
+									@if (Auth::guest())
 									<li><a href="login">Home</a></li>
-									<li class="dropdown">
-										<a class="dropdown-toggle" data-toggle='dropdown' href="home.html">Home <span class="fa fa-caret-down"></span></a>
-										<ul class="dropdown-menu h-nav">
-											<li><a href="home.html">Home Page 1</a></li>
-											<li><a href="home-2.html">Home Page 2</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a class="dropdown-toggle" data-toggle='dropdown' href="#">Grid <span class="fa fa-caret-down"></span></a>
-										<ul class="dropdown-menu h-nav">
-											<li><a href="listings.html">listing 1</a></li>
-											<li><a href="listingsTwo.html">listing 2</a></li>
-											<li><a href="listTable.html">listing 3</a></li>
-											<li><a href="listTableTwo.html">listing 4</a></li>
-										</ul>
-									</li>
-									<li><a href="compare.html">compare</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="article.html">Services</a></li>
-									<li class="dropdown">
-										<a class="dropdown-toggle" data-toggle='dropdown' href="#">Blog <span class="fa fa-caret-down"></span></a>
-										<ul class="dropdown-menu h-nav">
-											<li><a href="blog.html">Blog 1</a></li>
-											<li><a href="blogTwo.html">Blog 2</a></li>
-											<li><a href="404.html">Page 404</a></li>
-										</ul>
-									</li>
-									<li><a href="submit1.html">Shop</a></li>
+									<li><a href="login">Available Cars</a></li>
+									<li><a href="login">Comapre</a></li>
+									<li><a href="submit1.html">About</a></li>
 									<li><a href="contacts.html">Contact</a></li>
+									@elseif(Auth::guard('client')->check())
+									<li><a href="login">Available Cars</a></li>
+									<li><a href="login">My Status</a></li>
+									<li><a href="submit1.html">My Schedule</a></li>
+									<li><a href="login">Comapre</a></li>
+									<li><a href="contacts.html">Contact</a></li>
+									@endif
 								</ul>
 							</div>
 						</div>
@@ -283,30 +265,30 @@
 			</div>
 		</footer><!--b-footer-->
 		<!--Main-->
-		<script src="js/jquery-1.11.3.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/modernizr.custom.js"></script>
+		<script src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
+		<script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('js/modernizr.custom.js') }}"></script>
 
-		<script src="assets/rendro-easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-		<script src="js/waypoints.min.js"></script>
-		<script src="js/jquery.easypiechart.min.js"></script>
-		<script src="js/classie.js"></script>
+		<script src="{{ asset('assets/rendro-easy-pie-chart/dist/jquery.easypiechart.min.js') }}"></script>
+		<script src="{{ asset('js/waypoints.min.js') }}"></script>
+		<script src="{{ asset('js/jquery.easypiechart.min.js') }}"></script>
+		<script src="{{ asset('js/classie.js') }}"></script>
 
 		<!--Switcher-->
-		<script src="assets/switcher/js/switcher.js"></script>
+		<script src="{{ asset('assets/switcher/js/switcher.js') }}"></script>
 		<!--Owl Carousel-->
-		<script src="assets/owl-carousel/owl.carousel.min.js"></script>
+		<script src="{{ asset('assets/owl-carousel/owl.carousel.min.js') }}"></script>
 		<!--bxSlider-->
-		<script src="assets/bxslider/jquery.bxslider.js"></script>
+		<script src="{{ asset('assets/bxslider/jquery.bxslider.js') }}"></script>
 		<!-- jQuery UI Slider -->
-		<script src="assets/slider/jquery.ui-slider.js"></script>
+		<script src="{{ asset('assets/slider/jquery.ui-slider.js') }}"></script>
 
 		<!--Theme-->
-		<script src="js/jquery.smooth-scroll.js"></script>
-		<script src="js/wow.min.js"></script>
-		<script src="js/jquery.placeholder.min.js"></script>
-		<script src="js/theme.js"></script>
+		<script src="{{ asset('js/jquery.smooth-scroll.js') }}"></script>
+		<script src="{{ asset('js/wow.min.js') }}"></script>
+		<script src="{{ asset('js/jquery.placeholder.min.js') }}"></script>
+		<script src="{{ asset('js/theme.js') }}"></script>
 
 	</body>
 </html>

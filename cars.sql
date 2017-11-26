@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 19, 2017 at 02:43 PM
+-- Generation Time: Nov 26, 2017 at 12:09 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -155,32 +155,35 @@ CREATE TABLE `car_images` (
 --
 
 CREATE TABLE `client` (
-  `client_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `fname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `pwd` text NOT NULL,
+  `password` text NOT NULL,
   `phone` int(11) NOT NULL,
   `city` varchar(255) NOT NULL,
   `gender` varchar(255) NOT NULL,
-  `nic` text NOT NULL
+  `nic` text NOT NULL,
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `client`
 --
 
-INSERT INTO `client` (`client_id`, `fname`, `email`, `pwd`, `phone`, `city`, `gender`, `nic`) VALUES
-(2, 'felix kiamba', 'kiambafelix@yahoo.com', '30073147', 705053484, 'nairobi', 'Male', ''),
-(3, 'concepter', 'concybogita@gmail.com', '27695131', 707403614, 'kisii', 'Female', ''),
-(4, 'enock bosire', 'enock@gmail.com', '1234567', 717056766, 'narok', 'Male', ''),
-(5, 'pawan', 'k142173@nu.edu.pk', '22', 0, 'karachi', 'Male', ''),
-(6, 'kumar', 'khatri.catten22@gmail.com', '12345', 2147483647, 'karachi', 'Male', ''),
-(7, 'pawan', 'pawan@pawan.com', '12', 2147483647, 'karachi', 'Male', ''),
-(8, 'nothing', 'nothing@nu.edu.pk', '12', 0, 'aads', 'Male', ''),
-(9, 'karan', 'karan@nu.edu.pk', '12', 2147483647, 'abtabad', 'Male', ''),
-(10, 'buyer1', 'buyer@nu.edu.pk', '12', 2147483647, 'karachi', 'Male', ''),
-(11, 'ff', 'ddd', 'ddd', 1234, 'fdfd', 'male', 'dd'),
-(12, 'zilehuda', 'zilehuda.tariq@gmail.com', '12345', 123456, 'karachi', 'Male', '12345');
+INSERT INTO `client` (`id`, `fname`, `email`, `password`, `phone`, `city`, `gender`, `nic`, `remember_token`) VALUES
+(2, 'felix kiamba', 'kiambafelix@yahoo.com', '30073147', 705053484, 'nairobi', 'Male', '', NULL),
+(3, 'concepter', 'concybogita@gmail.com', '27695131', 707403614, 'kisii', 'Female', '', NULL),
+(4, 'enock bosire', 'enock@gmail.com', '1234567', 717056766, 'narok', 'Male', '', NULL),
+(5, 'pawan', 'k142173@nu.edu.pk', '22', 0, 'karachi', 'Male', '', NULL),
+(6, 'kumar', 'khatri.catten22@gmail.com', '12345', 2147483647, 'karachi', 'Male', '', NULL),
+(7, 'pawan', 'pawan@pawan.com', '12', 2147483647, 'karachi', 'Male', '', NULL),
+(8, 'nothing', 'nothing@nu.edu.pk', '12', 0, 'aads', 'Male', '', NULL),
+(9, 'karan', 'karan@nu.edu.pk', '12', 2147483647, 'abtabad', 'Male', '', NULL),
+(10, 'buyer1', 'buyer@nu.edu.pk', '12', 2147483647, 'karachi', 'Male', '', NULL),
+(11, 'ff', 'ddd', 'ddd', 1234, 'fdfd', 'male', 'dd', NULL),
+(13, 'shayan', 'shayan@shayan.com', '$2y$10$DjcjnztbQqQqtaNXKKcIjutGtJFtQQAlXtNyvvPGcBEz0crIfQoSa', 3434, 'karachi', 'Male', '123456', NULL),
+(14, 'taha', 'taha@taha.com', '$2y$10$y.q1fzVkwJf.x4z/vCM7m.HtJSBB23adoK3IkPuO32IMLHe/PfXTC', 1235, 'karahci', 'Male', '124', NULL),
+(15, 'zilehuda', 'zilehuda@gmail.com', '$2y$10$mmQeA8fKtHnS4IwEgOM6r.Y6MqImtsQAmH.wmYef6M7GGdvApaZX.', 12345, 'karachi', 'male', '12345', 'HVDrYGhXa9ZwUBg4lJEyAY523AMqk7c1yryius9ylUEBqwQKBIdmvcgvvYMf');
 
 -- --------------------------------------------------------
 
@@ -285,16 +288,17 @@ CREATE TABLE `seller` (
   `phone` int(11) NOT NULL,
   `city` text NOT NULL,
   `nic` text NOT NULL,
-  `pwd` text NOT NULL
+  `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `seller`
 --
 
-INSERT INTO `seller` (`seller_id`, `fname`, `gender`, `email`, `phone`, `city`, `nic`, `pwd`) VALUES
+INSERT INTO `seller` (`seller_id`, `fname`, `gender`, `email`, `phone`, `city`, `nic`, `password`) VALUES
 (1, 'pawan', 'Male', 'khatri.pawan22@yahoo.com', 2147483647, '', '', ''),
-(2, 'nothing', 'Male', 'noth@nu.edu.pk', 2147483647, '', '', '');
+(2, 'nothing', 'Male', 'noth@nu.edu.pk', 2147483647, '', '', ''),
+(3, 'zilehuda', 'male', 'zilehuda@gmail.com', 12345, 'karachi', '12345', '$2y$10$BBHB31MjL93SMs1PC1Yo8OU0T67LJAG63noq9G3mf4IUGHxqXQbL.');
 
 --
 -- Indexes for dumped tables
@@ -328,7 +332,7 @@ ALTER TABLE `car_bookin`
 -- Indexes for table `client`
 --
 ALTER TABLE `client`
-  ADD PRIMARY KEY (`client_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `hire`
@@ -383,7 +387,7 @@ ALTER TABLE `cars`
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `hire`
 --
@@ -398,7 +402,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `seller`
 --
 ALTER TABLE `seller`
-  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
+  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
