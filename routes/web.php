@@ -12,8 +12,18 @@
 */
 
 Route::get('/', function () {
+    
+    
     return view('home');
 })->name('home');
+Route::get('dummy',function(){
+    echo session('company');
+    
+})->name('dummy');
+Route::get('submit',function(){
+    echo session('company');
+    
+})->name('submit1');
 
 Route::group(["prefix"=>"client"],function(){
   Route::post('login', 'Auth\ClientLoginController@login')->name('client.login.submit');
@@ -35,9 +45,13 @@ Route::get('available-cars', function () {
 Route::post('client-register',"RegisterController@RegisterClient")->name("client-register");
 //Route::post('/log','Controller@login');
 
+Route::get('submit1',function(){
+    return view('owner.submit1');
+});
 
-
-
+Route::post('submit1','CarSubmitController@submit1')->name('submit1.submit');
+Route::post('submit2','CarSubmitController@submit2')->name('submit2.submit');
+Route::post('submit3','CarSubmitController@submit3')->name('submit3.submit');
 Route::get('register', function () {
     return view('buyer.register');
 });

@@ -125,7 +125,8 @@
 					</div>
 					<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
 						<div class="b-submit__main">
-							<form action="submit4.html" method="post" >
+							<form class="s-submit clearfix" action="{{ route('submit2.submit') }}" method="POST">
+                                {{ csrf_field() }}
 								<div class="s-form">
 									<div class="b-submit__main-file">
 										<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.3s">

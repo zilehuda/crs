@@ -125,7 +125,8 @@
 					</div>
 					<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
 						<div class="b-submit__main">
-							<form action="submit5.html" method="post" class='s-submit'>
+							<form action="{{ route('submit3.submit') }}" method="post" class='s-submit'>
+                                {{ csrf_field() }}
 								<div class="b-submit__main-contacts wow zoomInUp" data-wow-delay="0.3s">
 									<header class="s-headerSubmit s-lineDownLeft">
 										<h2>Upload Your Vehicle Photos</h2>
@@ -157,7 +158,7 @@
 											<div class="b-submit__main-element">
 												<label>Enter Mileage <span>*</span></label>
 												<div class="b-submit__main-contacts-inputSelect">
-													<input type="text" name="text1"/>
+													<input type="text" name="milage"/>
 													<div class="b-submit__main-contacts-select">
 														<select name="km" class="m-select">
 															<option>IN KMS</option>
@@ -169,7 +170,7 @@
 											<div class="b-submit__main-element">
 												<label>Air Bags</label>
 												<div class="s-relative">
-													<select class="m-select" name="select1">
+													<select class="m-select" name="airbags">
 														<option>Select</option>
 													</select>
 													<span class="fa fa-caret-down"></span>
@@ -180,7 +181,7 @@
 											<div class="b-submit__main-element">
 												<label>GPS:Global Positioning System <span></span></label>
 												<div class="s-relative">
-													<select class="m-select" name="select1">
+													<select class="m-select" name="gps">
 														<option>Select</option>
 													</select>
 													<span class="fa fa-caret-down"></span>
@@ -199,7 +200,7 @@
 										<div class="col-md-6 col-xs-12">
 											<div class="b-submit__main-element">
 												<label>Enter Registerarion Plate Number  <span>*</span></label>
-												<input placeholder="xxx xxx xxx" type="text" name="text4"/>
+												<input placeholder="xxx xxx xxx" type="text" name="plate_no"/>
 											</div>
 											
                                             
@@ -207,7 +208,7 @@
                                             <div class="b-submit__main-element">
                                             <label>Select Registerarion Expiry Year <span>*</span></label>
 												<div class="s-relative">
-													<select class="m-select" name="select4">
+													<select class="m-select" name="reg_expy">
 														<option>Select</option>
 													</select>
 													<span class="fa fa-caret-down"></span>
@@ -222,7 +223,7 @@
 											<div class="b-submit__main-element">
                                             <label>Select Registerarion Expiry Month  <span>*</span></label>
                                             <div class="s-relative">
-                                                <select class="m-select" name="select3">
+                                                <select class="m-select" name="reg_expm">
                                                     <option>Select</option>
                                                 </select>
                                                 <span class="fa fa-caret-down"></span>

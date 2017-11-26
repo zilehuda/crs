@@ -127,7 +127,8 @@
 							<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
 								<h2 class="">Add Your Vehicle Details</h2>
 							</header>
-							<form class="s-submit clearfix" action="submit2.html" method="POST">
+							<form class="s-submit clearfix" action="{{ route('submit1.submit') }}" method="POST">
+                                {{ csrf_field() }}
 								<div class="row">
 									<div class="col-md-6 col-xs-12">
 										<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
@@ -145,7 +146,7 @@
 										<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 											<label>Select Fuel Type <span>*</span></label>
 											<div class='s-relative'>
-												<select class="m-select" name="select5">
+												<select class="m-select" name="fuel">
 													<option>Select</option>
 												</select>
 												<span class="fa fa-caret-down"></span>
