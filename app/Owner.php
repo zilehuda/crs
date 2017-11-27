@@ -10,8 +10,9 @@ class Owner extends Authenticatable
 {
     use Notifiable;
 
-    protected $gaurd = 'owner';
+      protected $guard = 'owner';
       protected $table = 'seller';
+      protected $primaryKey = 'seller_id';
       public $timestamps = false;
       protected $fillable = ['fname','email','password','phone','city','gender','nic'];
 

@@ -44,7 +44,7 @@
 								<li><a href="#">REGISTER</a></li>
 								<li><a href="#">LOGIN AS BUYER</a></li>
 								<li><a href="#">LOGIN AS SELLER</a></li>
-								@elseif (Auth::guard('client')->check())
+								@elseif (Auth::guard('owner')->check() || Auth::guard('client')->check())
 								<li><a href="{{ route('logout') }}">LOGOUT</a></li>
 								<li><a href="#">{{ Auth::user()->fname }}</a></li>
 
@@ -89,6 +89,10 @@
 									<li><a href="submit1.html">My Schedule</a></li>
 									<li><a href="login">Comapre</a></li>
 									<li><a href="contacts.html">Contact</a></li>
+									@elseif(Auth::guard('owner')->check())
+									<li><a href="login">My Cars</a></li>
+									<li><a href="login">Add New Car</a></li>
+									<li><a href="login">Car Status</a></li>
 									@endif
 								</ul>
 							</div>

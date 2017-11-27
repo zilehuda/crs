@@ -19,6 +19,21 @@ class Controller extends BaseController
       return redirect()->intended(route('home'));
     }
 
+    public function Redirect()
+    {
+      if(Auth::guard('client')->check())
+      {
+        return redirect()->route('client.dashboard');
+      }
+      elseif(Auth::guard('owner')->check())
+      {
+        return redirect()->route('owner.dashboard');
+      }
+      else {
+        return view('home');
+      }
+    }
+
 
 
 

@@ -33,17 +33,17 @@
       <tr>
         <th><h5>CAR NAME:</h5></th>
         <th><h5>START DURATION</h5></th>
-        <th><h5></h5></th>
         <th><h5>CAR STATUS:</h5></th>
       </tr>
     </thead>
     <tbody>
+			@foreach($cb as $value)
       <tr>
-        <td>July</td>
+        <td>{{ $value->car_name }}</td>
         <td>02-01-2016</td>
-        <td></td>
-        <td><a href="#" class="btn m-btn m-infoBtn">PENDING<span class="fa fa-angle-right"></span></a></td>
+        <td><a  class="btn m-btn m-infoBtn">{{ $value->status }}<span class="fa fa-angle-right"></span></a></td>
       </tr>
+			@endforeach
     </tbody>
   </table>
 

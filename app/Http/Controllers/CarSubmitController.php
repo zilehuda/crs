@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class CarSubmitController extends Controller
 {
     //
-    
+
     public function submit1(Request $req)
     {
        // echo $req->company;
@@ -17,19 +17,19 @@ class CarSubmitController extends Controller
         session(['ins_no' => $req->ins_no]);
         session(['car_name' => $req->model]);
         session(['capacity' =>$req-> capacity]);
-        
-        return view('owner.Submit2');
+
+        return view('owner.submit2');
     }
     public function submit2(Request $req)
     {
-       
-        
-        
-        return view('owner.Submit3');
+
+
+
+        return view('owner.submit3');
     }
     public function submit3(Request $req)
     {
-       
+
         session(['hire_cost' => $req->price]);
         session(['milage' => $req->milage]);
         session(['air_bag' => $req->airbags]);
@@ -38,7 +38,6 @@ class CarSubmitController extends Controller
         session(['expiry_month' =>$req-> reg_expm]);
         session(['expiry_year' =>$req-> reg_expy]);
         echo session ('company');
-        
+
     }
 }
-    

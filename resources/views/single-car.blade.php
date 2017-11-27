@@ -6,14 +6,13 @@
       <div class="row">
         <div class="col-sm-9 col-xs-12">
           <div class="b-detail__head-title">
-            <h1>Nissan Maxima SV Premium 2016</h1>
-            <h3>Fully Redesigned Upscale Midsize Car</h3>
+            <h1>{{ $car->car_name }}</h1>
           </div>
         </div>
         <div class="col-sm-3 col-xs-12">
           <div class="b-detail__head-price">
-            <div class="b-detail__head-price-num">$44,380</div>
-            <p>Included Taxes &amp; Checkup</p>
+            <div class="b-detail__head-price-num">Rs.{{ $car->hire_cost }}</div>
+            <p>per day cost</p>
           </div>
         </div>
       </div>
@@ -92,127 +91,9 @@
                 </div>
               </div>
             </div>
-            <div class="b-detail__main-info-characteristics wow zoomInUp" data-wow-delay="0.5s">
-              <div class="b-detail__main-info-characteristics-one">
-                <div class="b-detail__main-info-characteristics-one-top">
-                  <div><span class="fa fa-car"></span></div>
-                  <p>Brand New</p>
-                </div>
-                <div class="b-detail__main-info-characteristics-one-bottom">
-                  Status
-                </div>
-              </div>
-              <div class="b-detail__main-info-characteristics-one">
-                <div class="b-detail__main-info-characteristics-one-top">
-                  <div><span class="fa fa-trophy"></span></div>
-                  <p>5,000KM</p>
-                </div>
-                <div class="b-detail__main-info-characteristics-one-bottom">
-                  Warrenty
-                </div>
-              </div>
-              <div class="b-detail__main-info-characteristics-one">
-                <div class="b-detail__main-info-characteristics-one-top">
-                  <div><span class="fa fa-at"></span></div>
-                  <p>Auto</p>
-                </div>
-                <div class="b-detail__main-info-characteristics-one-bottom">
-                  Transmission
-                </div>
-              </div>
-              <div class="b-detail__main-info-characteristics-one">
-                <div class="b-detail__main-info-characteristics-one-top">
-                  <div><span class="fa fa-car"></span></div>
-                  <p>FWD</p>
-                </div>
-                <div class="b-detail__main-info-characteristics-one-bottom">
-                  Drivetrain
-                </div>
-              </div>
-              <div class="b-detail__main-info-characteristics-one">
-                <div class="b-detail__main-info-characteristics-one-top">
-                  <div><span class="fa fa-user"></span></div>
-                  <p>5</p>
-                </div>
-                <div class="b-detail__main-info-characteristics-one-bottom">
-                  Passangers
-                </div>
-              </div>
-              <div class="b-detail__main-info-characteristics-one">
-                <div class="b-detail__main-info-characteristics-one-top">
-                  <div><span class="fa fa-fire-extinguisher"></span></div>
-                  <p>10.8L</p>
-                </div>
-                <div class="b-detail__main-info-characteristics-one-bottom">
-                  In City
-                </div>
-              </div>
-              <div class="b-detail__main-info-characteristics-one">
-                <div class="b-detail__main-info-characteristics-one-top">
-                  <div><span class="fa fa-fire-extinguisher"></span></div>
-                  <p>7.5L</p>
-                </div>
-                <div class="b-detail__main-info-characteristics-one-bottom">
-                  On Highway
-                </div>
-              </div>
-            </div>
+
             <div class="b-detail__main-info-text wow zoomInUp" data-wow-delay="0.5s">
-              <div class="b-detail__main-aside-about-form-links">
-                <a href="#" class="j-tab m-active s-lineDownCenter" data-to='#info1'>GENERAL INQUIRY</a>
-                <a href="#" class="j-tab" data-to='#info2'>SCHEDULE TEST DRIVE</a>
-                <a href="#" class="j-tab" data-to='#info3'>GENERAL INQUIRY</a>
-                <a href="#" class="j-tab" data-to='#info4'>SCHEDULE TEST DRIVE</a>
-              </div>
-              <div id="info1">
-                <p>The 2016 Nissan Maxima is powered by a 3.5-liter V6 engine with 300 horsepower, 10 more than the engine in the outgoing
-                  model. A continuously variable transmission and front-wheel drive are standard in all models. Nissan expects the 2016 Maxima
-                  to return 22/30 mpg city/highway, which is an improvement over the previous model's EPA-estimated 19/26 mpg.</p>
-                <p>
-                  The 2016 Nissan Maxima seats five and comes with a power-adjustable driver,seat, an eight-speaker audio system, Bluetooth,
-                  satellite radio, HD Radio, push-button start, a rearview camera, two USB ports, the NissanConnect infotainment system,
-                  navigation, an 8-inch color display screen and voice controls for phone, audio and navigation functions. Leather upholstery,
-                  heated and ventilated front seats, an 11-speaker Bose audio system, a 360-degree parking camera system, adaptive cruise
-                  control, blind spot warning, rear cross traffic alert, front and rear parking sensors and forward collision warning with automatic
-                  braking are available. The 2016 Nissan Maxima starts at $33,235 including destination fees.</p>
-                <p>The full review of the 2016 Nissan Maxima is coming soon. In the meantime, you can see pictures, research prices or view and
-                  compare specs for the 2016 Nissan Maxima. If you, considering the 2014 Nissan Maxima, you can read our review.</p>
-                <p>Vestibulum auctor lacinia nunc. Nunc ut turpis.Sed libero magna, fermentum viverra, egestas non, fermentum sed, elit. Aenean
-                  erat orci, mollis quis gravida sed, mollis a, quam. Integer fermentum neque egestas orci. Nunc posuere, felis sit amet faucibus
-                  convallis tortor enim viverra quam, hendrerit interdum dui quam ut lacus. Donec quis quam in ante condimentum blan erdit.
-                  Integer et urna. Vestibulum nisl. Ut ante est, imperdiet dignissim eleifend sit amet lacinia tempor justo. Nunc ornare atm nibh.
-                  Fusce ut felis. </p>
-                <p>Donec ullamcorper nisi ac lectus. Proin at orci. Suspendisse nec orci nec elit convallis porttitor. Praesent sit amet turpis eu nisl
-                  faucibus pharetra. Sed eu felis. Etiam eleifend nisl nec lectus. Ut suscipit pede eu diam. Aenean vitae quam. Cras felis. Sed utdw
-                  nibh. Duis libero. Vivamus pharetra libero non facilisis imperdiet mi augue feugiat nisl.</p>
-              </div>
-              <div id="info2">
-                <p>The full review of the 2016 Nissan Maxima is coming soon. In the meantime, you can see pictures, research prices or view and
-                  compare specs for the 2016 Nissan Maxima. If you‚considering the 2014 Nissan Maxima, you can read our review.</p>
-                <p>Vestibulum auctor lacinia nunc. Nunc ut turpis.Sed libero magna, fermentum viverra, egestas non, fermentum sed, elit. Aenean
-                  erat orci, mollis quis gravida sed, mollis a, quam. Integer fermentum neque egestas orci. Nunc posuere, felis sit amet faucibus
-                  convallis tortor enim viverra quam, hendrerit interdum dui quam ut lacus. Donec quis quam in ante condimentum blan erdit.
-                  Integer et urna. Vestibulum nisl. Ut ante est, imperdiet dignissim eleifend sit amet lacinia tempor justo. Nunc ornare atm nibh.
-                  Fusce ut felis. </p>
-                <p>Donec ullamcorper nisi ac lectus. Proin at orci. Suspendisse nec orci nec elit convallis porttitor. Praesent sit amet turpis eu nisl
-                  faucibus pharetra. Sed eu felis. Etiam eleifend nisl nec lectus. Ut suscipit pede eu diam. Aenean vitae quam. Cras felis. Sed utdw
-                  nibh. Duis libero. Vivamus pharetra libero non facilisis imperdiet mi augue feugiat nisl.</p>
-              </div>
-              <div id="info3">
-                <p>Vestibulum auctor lacinia nunc. Nunc ut turpis.Sed libero magna, fermentum viverra, egestas non, fermentum sed, elit. Aenean
-                  erat orci, mollis quis gravida sed, mollis a, quam. Integer fermentum neque egestas orci. Nunc posuere, felis sit amet faucibus
-                  convallis tortor enim viverra quam, hendrerit interdum dui quam ut lacus. Donec quis quam in ante condimentum blan erdit.
-                  Integer et urna. Vestibulum nisl. Ut ante est, imperdiet dignissim eleifend sit amet lacinia tempor justo. Nunc ornare atm nibh.
-                  Fusce ut felis. </p>
-                <p>Donec ullamcorper nisi ac lectus. Proin at orci. Suspendisse nec orci nec elit convallis porttitor. Praesent sit amet turpis eu nisl
-                  faucibus pharetra. Sed eu felis. Etiam eleifend nisl nec lectus. Ut suscipit pede eu diam. Aenean vitae quam. Cras felis. Sed utdw
-                  nibh. Duis libero. Vivamus pharetra libero non facilisis imperdiet mi augue feugiat nisl.</p>
-              </div>
-              <div id="info4">
-                <p>Donec ullamcorper nisi ac lectus. Proin at orci. Suspendisse nec orci nec elit convallis porttitor. Praesent sit amet turpis eu nisl
-                  faucibus pharetra. Sed eu felis. Etiam eleifend nisl nec lectus. Ut suscipit pede eu diam. Aenean vitae quam. Cras felis. Sed utdw
-                  nibh. Duis libero. Vivamus pharetra libero non facilisis imperdiet mi augue feugiat nisl.</p>
-              </div>
+
             </div>
             <div class="b-detail__main-info-extra wow zoomInUp" data-wow-delay="0.5s">
               <h2 class="s-titleDet">EXTRA FEATURES</h2>
@@ -255,18 +136,10 @@
               <h2 class="s-titleDet">Description</h2>
               <div class="row">
                 <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Make</h4>
+                  <h4 class="b-detail__main-aside-desc-title">Company</h4>
                 </div>
                 <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">Nissan</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Model</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">Maxima</p>
+                  <p class="b-detail__main-aside-desc-value">{{$car->company}}</p>
                 </div>
               </div>
               <div class="row">
@@ -274,71 +147,7 @@
                   <h4 class="b-detail__main-aside-desc-title">Kilometres</h4>
                 </div>
                 <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">39,000 km</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Body Type</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">Sedan</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Style/trim</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">SV Premium</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Engine</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">V-6 cyl</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Drivetrain</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">EWD</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Transmission</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">Dual-Clutch Automatic</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Exterior Color</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">Dark Grey</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Interior color</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">Jet Black</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Passangers/Doors</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">5 Passengers / 4 Doors</p>
+                  <p class="b-detail__main-aside-desc-value">{{$car->mileage}} km</p>
                 </div>
               </div>
               <div class="row">
@@ -346,26 +155,19 @@
                   <h4 class="b-detail__main-aside-desc-title">Fuel Type</h4>
                 </div>
                 <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">Gasoline Fue</p>
+                  <p class="b-detail__main-aside-desc-value">{{$car->fuel_type}}</p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">City Fuel Economy </h4>
+                  <h4 class="b-detail__main-aside-desc-title">Capacity</h4>
                 </div>
                 <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">10.8L/100km</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4 class="b-detail__main-aside-desc-title">Hwy Fuel Economy</h4>
-                </div>
-                <div class="col-xs-6">
-                  <p class="b-detail__main-aside-desc-value">7.7L/100km</p>
+                  <p class="b-detail__main-aside-desc-value">{{$car->capacity}}</p>
                 </div>
               </div>
             </div>
+
             <div class="b-detail__main-aside-about wow zoomInUp" data-wow-delay="0.5s">
               <h2 class="s-titleDet">BOOK YOUR SCHEDULE</h2>
               <div class="b-detail__main-aside-about-call">
@@ -382,7 +184,8 @@
                   <button type="submit" class="btn m-btn">REGISTER ACCOUNT TO SCHEDULE<span class="fa fa-angle-right"></span></button>
                 </form>
                 @elseif(Auth::guard('client')->check())
-                <form  action="/" method="post">
+                <form  action="{{ route('book.submit') }}" method="post">
+                  {{ csrf_field() }}
                   <button type="submit" class="btn m-btn">BOOK MY SCHEDULE<span class="fa fa-angle-right"></span></button>
                 </form>
                 @endif

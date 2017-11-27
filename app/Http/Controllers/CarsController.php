@@ -20,6 +20,7 @@ class CarsController extends Controller
 
       $car = car::find($id);
       //echo $car->car_name;
+      session(['car_id' => $id]);
       return view('single-car')->with('car',$car);
     }
 }

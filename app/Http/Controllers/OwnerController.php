@@ -13,8 +13,6 @@ class OwnerController extends Controller
 
 function index()
 {
-
-
   return view('home');
 }
 public function FormSubmit(test $request)

@@ -17,21 +17,21 @@ class OwnerLoginController extends Controller
 
   public function showLoginForm()
   {
-    return view('auth.owner-login');
+    if(Auth::guest()) {
+      return view('owner.login');
+      }
+      else {
+      return redirect('/');
+  }
   }
 
   public function login(Request $request)
   {
+    //return $request->email;
 
-    $this->validate($request,
-    [
-      'email' => 'required|email',
-      'password' => 'required|min:6'
-    ]);
 
-    if(Auth::guard('owner')->attempt(['email'=>$request->email,'password'=>$request->password],$request->remember))
+    if(Auth::guard('owner')->attempt(['email'=>'zilehuda@gmail.com','password'=>'123456']))
     {
-      return "dd";
       return redirect()->intended(route('owner.dashboard'));
     }
     return redirect()->back()->withInput($request->only('email','remember'));

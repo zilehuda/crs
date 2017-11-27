@@ -1,4 +1,3 @@
-
 @extends('base')
 @section('content')
 
@@ -139,8 +138,8 @@
                                         <label>Vehicle Manufacturer Year <span>*</span></label>
                                         <input placeholder="e.g:        2010" type="text"  name="menu_year" />
 										</div>
-										
-										
+
+
 
 
 										<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
@@ -152,7 +151,7 @@
 												<span class="fa fa-caret-down"></span>
 											</div>
 										</div>
-										
+
 
 
 										<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
@@ -165,13 +164,13 @@
 											<label>Enter Vehicle Model <span>*</span></label>
 											<input placeholder="Car Name" type="text"  name="model" />
 										</div>
-										
-                                        
-										
-										
 
 
-										
+
+
+
+
+
 										<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 											<label>Enter Engine Capacity <span>*</span></label>
 											<input placeholder="e.g:     60 hp @ 6000 RPM" type="text" name="capacity" />
