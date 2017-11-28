@@ -30,7 +30,7 @@ class ClientLoginController extends Controller
   {
 
 
-    if(Auth::guard('client')->attempt(['email'=>$request->email,'password'=>$request->pwd]))
+    if(Auth::guard('client')->attempt(['email'=>$request->email,'password'=>$request->password]))
     {
       echo "string";
       return redirect()->intended(route('client.dashboard'));

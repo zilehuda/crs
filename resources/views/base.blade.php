@@ -293,6 +293,9 @@
 		<script src="{{ asset('js/wow.min.js') }}"></script>
 		<script src="{{ asset('js/jquery.placeholder.min.js') }}"></script>
 		<script src="{{ asset('js/theme.js') }}"></script>
+		<script src="{{ asset('js/jquery.js') }}"></script>
+		<script src="{{ asset('js/jquery.validate.js') }}"></script>
+		@yield('js')
 
 	</body>
 </html>

@@ -1,4 +1,7 @@
 @extends('base')
+@section('js')
+<script src="{{ asset('js/loginvalidate.js') }}"></script>
+@endsection
 @section('content')
 <section class="b-pageHeader">
 	<div class="container">
@@ -41,19 +44,19 @@
 					<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
 						<h2 class="">Add Your Vehicle Details</h2>
 					</header>
-					<form class="s-submit clearfix" action="{{ route ('client.login.submit') }}" method="POST">
+					<form id="signupForm" class="s-submit clearfix" action="{{ route ('client.login.submit') }}" method="POST">
 						{{ csrf_field() }}
 						<div class="row">
 							<div class="col-md-6 col-xs-12">
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 									<label>Enter email address <span>*</span></label>
-									<input placeholder="Email Address" type="text" name="email" />
+									<input id="email" placeholder="Email Address" type="text" name="email" />
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12">
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
-									<label>Enter password <span>*</span></label>
-									<input class="pwd-style" style="display: block;
+									<label >Enter password <span>*</span></label>
+									<input style="display: block;
 								  width: 100%;
 								  padding: 15px 20px;
 								  font: 400 13px 'Open Sans',sans-serif;
@@ -65,7 +68,7 @@
 								  border-radius: 30px;
 								  padding-top: 13px;
 								  padding-bottom: 13px;
-								  height:46px;" placeholder="Password" type="password"  name="pwd" />
+								  height:46px;" id="password" placeholder="Password" type="password"  name="password" />
 								</div>
 							</div>
 						</div>
