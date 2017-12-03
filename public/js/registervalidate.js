@@ -1,7 +1,7 @@
 $(document).ready(function()  {
     // validate the comment form when it is submitted
          $("#commentForm").validate();
-         
+
                  // validate signup form on keyup and submit
                  $("#registerForm").validate({
                      rules: {
@@ -24,21 +24,17 @@ $(document).ready(function()  {
                             required: true,
                             minlength: 9
                         },
-                         
-                        
-                        
-                        
                         username: {
                              required: true,
                              minlength: 2
                          },
-                         
+
                          confirm_password: {
                              required: true,
                              minlength: 5,
                              equalTo: "#password"
                          },
-                         
+
                          topic: {
                              required: "#newsletter:checked",
                              minlength: 2
@@ -46,7 +42,7 @@ $(document).ready(function()  {
                          agree: "required"
                      },
                      messages: {
-                         firstname: "Please enter your firstname",
+                         fname: "Please enter your firstname",
                          lastname: "Please enter your lastname",
                          username: {
                              required: "Please enter a username",
@@ -66,7 +62,7 @@ $(document).ready(function()  {
                          topic: "Please select at least 2 topics"
                      }
                  });
-         
+
                  // propose username by combining first- and lastname
                  $("#username").focus(function() {
                      var firstname = $("#firstname").val();
@@ -75,7 +71,7 @@ $(document).ready(function()  {
                          this.value = firstname + "." + lastname;
                      }
                  });
-         
+
                  //code to hide topic selection, disable for demo
                  var newsletter = $("#newsletter");
                  // newsletter topics are optional, hide at first
@@ -87,6 +83,5 @@ $(document).ready(function()  {
                      topics[this.checked ? "removeClass" : "addClass"]("gray");
                      topicInputs.attr("disabled", !this.checked);
                  });
- 
+
  });
- 

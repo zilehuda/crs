@@ -42,8 +42,8 @@
 							<ul>
 								@if (Auth::guest())
 								<li><a href="#">REGISTER</a></li>
-								<li><a href="#">LOGIN AS BUYER</a></li>
-								<li><a href="#">LOGIN AS SELLER</a></li>
+								<li><a href="{{ route('owner.login') }}">LOGIN AS OWNER</a></li>
+								<li><a href="{{ route('client.login') }}">LOGIN AS CLIENT</a></li>
 								@elseif (Auth::guard('owner')->check() || Auth::guard('client')->check())
 								<li><a href="{{ route('logout') }}">LOGOUT</a></li>
 								<li><a href="#">{{ Auth::user()->fname }}</a></li>

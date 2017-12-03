@@ -73,8 +73,20 @@
 									<input id="email" placeholder="john@example.com" type="text" name="email" required/>
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
-									<label>Phone Number<span>*</span></label>
-									<input placeholder="0321-1234567" type="text" name="phone" />
+									<label >Password <span>*</span></label>
+									<input style="display: block;
+								  width: 100%;
+								  padding: 15px 20px;
+								  font: 400 13px 'Open Sans',sans-serif;
+								  border: 1px solid #eeeeee;
+								  color:#444;
+								  background: #f7f7f7!important;
+								  text-transform: none;
+								  border-radius: 30px;
+								  padding-top: 13px;
+								  padding-bottom: 13px;
+								  height:46px;" placeholder="*******" id="password" type="password" name="password" />
+
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 									<label>City<span>*</span></label>
@@ -93,6 +105,10 @@
 									</div>
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
+									<label>Phone Number<span>*</span></label>
+									<input placeholder="03211234567" type="text" name="phone" />
+								</div>
+								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 									<label >Password <span>*</span></label>
 									<input style="display: block;
 								  width: 100%;
@@ -105,7 +121,7 @@
 								  border-radius: 30px;
 								  padding-top: 13px;
 								  padding-bottom: 13px;
-								  height:46px;" placeholder="*******" type="password" name="password" />
+								  height:46px;" placeholder="*******" type="password" name="confirm_password" />
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 									<label>NIC<span>*</span></label>
