@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\car;
 use Illuminate\Http\Request;
-
+use Auth;
 class CarSubmitController extends Controller
 {
     //
@@ -30,13 +30,23 @@ class CarSubmitController extends Controller
     public function submit3(Request $req)
     {
 
-        session(['hire_cost' => $req->price]);
-        session(['milage' => $req->milage]);
-        session(['air_bag' => $req->airbags]);
-        session(['gps' => $req->gps]);
-        session(['reg_no' => $req->plate_no]);
-        session(['expiry_month' =>$req-> reg_expm]);
-        session(['expiry_year' =>$req-> reg_expy]);
+        $car = new car;
+        $car->car_name = session('car_name');
+        $car->company = session('company');
+        $car->fuel_type = session('fuel');
+        $car->capacity = session('capacity');
+        $car->ins_no = session('ins_no');
+        $car->hire_cost = $req->hire_cost;
+        $car->mileage = $req->mileage;
+        $car->air_bag = $req->air_bag;
+        $car->gps = $req->gps;
+        $car->reg_no = $req->plate_no;
+        $car->expiry_month = $req->reg_expm;
+        $car->expiry_year = $req->reg_expy;
+        $car->status = 'no';
+        $car->seller_id = Auth::user()->seller_id;
+        $car->manu_year = session('manu_year');
+        $car->save();
         echo session ('company');
 
     }

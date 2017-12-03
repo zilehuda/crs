@@ -28,6 +28,7 @@ Route::group(["prefix"=>"client"],function(){
   Route::get('/', 'ClientController@index')->name('client.dashboard');
 });
 
+Route::get('schedule',"ClientController@ClientSchedule");
 Route::group(["prefix"=>"owner"],function(){
 
   Route::post('login', 'Auth\OwnerLoginController@login')->name('owner.login.submit');
@@ -52,12 +53,13 @@ Route::group(['middleware' => 'auth:owner'],function()
   Route::get('submit1',function(){
       return view('owner.submit1');
   });
+  Route::post('submit2','CarSubmitController@submit1')->name('submit1.submit');
+  Route::post('submit3','CarSubmitController@submit2')->name('submit2.submit');
+  Route::post('submit4','CarSubmitController@submit3')->name('submit3.submit');
 });
 
 
-Route::post('submit2','CarSubmitController@submit1')->name('submit1.submit');
-Route::post('submit3','CarSubmitController@submit2')->name('submit2.submit');
-Route::post('submit4','CarSubmitController@submit3')->name('submit3.submit');
+
 Route::post('book','ClientController@BookCar')->name('book.submit');
 Route::get('register',function () {
     return view('buyer.register');

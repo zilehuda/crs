@@ -21,7 +21,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-5 col-xs-12 wow zoomInUp" data-wow-delay="0.3s">
-						<h5>YOUR CAR STATUS:</h5>
+						<h5>YOUR SCHEDULE CAR STATUS:</h5>
 					</div>
 				</div>
 			</div>
@@ -32,17 +32,17 @@
     <thead>
       <tr>
         <th><h5>CAR NAME:</h5></th>
-        <th><h5>START DURATION</h5></th>
-        <th><h5>CAR STATUS:</h5></th>
+        <th><h5>Start Date</h5></th>
+        <th><h5>End Date</h5></th>
       </tr>
     </thead>
     <tbody>
 			@foreach($cb as $value)
       <tr>
         <td>{{ $value->car_name }}</td>
-        <td>02-01-2016</td>
-        <td><a  class="btn m-btn m-infoBtn">{{ $value->status }}<span class="fa fa-angle-right"></span></a></td>
-      </tr>
+        <td>{{ date('d-m-Y', strtotime($value->hire_date)) }}</td>
+				<td>{{ date('d-m-Y', strtotime($value->end_date)) }}</td>
+            </tr>
 			@endforeach
     </tbody>
   </table>

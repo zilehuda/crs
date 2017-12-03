@@ -60,35 +60,7 @@
 
                   </ul>
                 </div>
-                <div class="col-xs-2 pagerSlider pagerVertical">
-                  <div class="b-detail__main-info-images-small" id="bx-pager">
-                    <a href="#" data-slide-index="0" class="b-detail__main-info-images-small-one">
-                      <img class="img-responsive" src="media/115x85/small1.jpg" alt="nissan" />
-                    </a>
-                    <a href="#" data-slide-index="1" class="b-detail__main-info-images-small-one">
-                      <img class="img-responsive" src="media/115x85/small2.jpg" alt="nissan" />
-                    </a>
-                    <a href="#" data-slide-index="2" class="b-detail__main-info-images-small-one">
-                      <img class="img-responsive" src="media/115x85/small3.jpg" alt="nissan" />
-                    </a>
-                    <a href="#" data-slide-index="3" class="b-detail__main-info-images-small-one">
-                      <img class="img-responsive" src="media/115x85/small4.jpg" alt="nissan" />
-                    </a>
-                    <a href="#" data-slide-index="4" class="b-detail__main-info-images-small-one">
-                      <img class="img-responsive" src="media/115x85/small5.jpg" alt="nissan" />
-                    </a>
-                    <a href="#" data-slide-index="5" class="b-detail__main-info-images-small-one">
-                      <img class="img-responsive" src="media/115x85/small1.jpg" alt="nissan" />
-                    </a>
-                    <a href="#" data-slide-index="6" class="b-detail__main-info-images-small-one">
-                      <img class="img-responsive" src="media/115x85/small2.jpg" alt="nissan" />
-                    </a>
-                    <a href="#" data-slide-index="7" class="b-detail__main-info-images-small-one">
-                      <img class="img-responsive" src="media/115x85/small3.jpg" alt="nissan" />
-                    </a>
 
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -98,34 +70,7 @@
             <div class="b-detail__main-info-extra wow zoomInUp" data-wow-delay="0.5s">
               <h2 class="s-titleDet">EXTRA FEATURES</h2>
               <div class="row">
-                <div class="col-xs-4">
-                  <ul>
-                    <li><span class="fa fa-check"></span>Security System</li>
-                    <li><span class="fa fa-check"></span>Air Conditioning</li>
-                    <li><span class="fa fa-check"></span>Alloy Wheels</li>
-                    <li><span class="fa fa-check"></span>Anti-Lock Brakes (ABS)</li>
-                    <li><span class="fa fa-check"></span>Anti-Theft</li>
-                    <li><span class="fa fa-check"></span>Anti-Starter</li>
-                  </ul>
-                </div>
-                <div class="col-xs-4">
-                  <ul>
-                    <li><span class="fa fa-check"></span>Dual Airbag</li>
-                    <li><span class="fa fa-check"></span>Intermittent Wipers</li>
-                    <li><span class="fa fa-check"></span>Keyless Entry</li>
-                    <li><span class="fa fa-check"></span>Power Mirrors</li>
-                    <li><span class="fa fa-check"></span>Power Seat</li>
-                    <li><span class="fa fa-check"></span>Power Steering</li>
-                  </ul>
-                </div>
-                <div class="col-xs-4">
-                  <ul>
-                    <li><span class="fa fa-check"></span>CD Player</li>
-                    <li><span class="fa fa-check"></span>Driver Side Airbag</li>
-                    <li><span class="fa fa-check"></span>Power Windows</li>
-                    <li><span class="fa fa-check"></span>Remote Start</li>
-                  </ul>
-                </div>
+
               </div>
             </div>
           </div>
@@ -186,6 +131,38 @@
                 @elseif(Auth::guard('client')->check())
                 <form  action="{{ route('book.submit') }}" method="post">
                   {{ csrf_field() }}
+    								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
+    									<label >Start Date <span>*</span></label>
+    									<input style="display: block;
+    								  width: 100%;
+    								  padding: 15px 20px;
+    								  font: 400 13px 'Open Sans',sans-serif;
+    								  border: 1px solid #eeeeee;
+    								  color:#444;
+    									outline: none;
+    								  background: #f7f7f7!important;
+    								  text-transform: none;
+    								  border-radius: 30px;
+    								  padding-top: 13px;
+    								  padding-bottom: 13px;
+    								  height:46px;"  placeholder="Password" id="password" type="date"  name="hire_date" required>
+    								</div>
+                    <div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
+    									<label >End Date <span>*</span></label>
+    									<input style="display: block;
+    								  width: 100%;
+    								  padding: 15px 20px;
+    								  font: 400 13px 'Open Sans',sans-serif;
+    								  border: 1px solid #eeeeee;
+    								  color:#444;
+    									outline: none;
+    								  background: #f7f7f7!important;
+    								  text-transform: none;
+    								  border-radius: 30px;
+    								  padding-top: 13px;
+    								  padding-bottom: 13px;
+    								  height:46px;"  placeholder="Password" id="password" type="date"  name="end_date" required>
+    								</div>
                   <button type="submit" class="btn m-btn">BOOK MY SCHEDULE<span class="fa fa-angle-right"></span></button>
                 </form>
                 @endif

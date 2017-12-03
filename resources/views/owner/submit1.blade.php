@@ -126,7 +126,8 @@
 											<label>Select Fuel Type <span>*</span></label>
 											<div class='s-relative'>
 												<select class="m-select" name="fuel">
-													<option>Select</option>
+													<option value="gas">gas</option>
+													<option value="cng">cng</option>
 												</select>
 												<span class="fa fa-caret-down"></span>
 											</div>
