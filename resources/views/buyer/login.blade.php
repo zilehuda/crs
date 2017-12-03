@@ -44,7 +44,7 @@
 					<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
 						<h2 class="">Add Your Vehicle Details</h2>
 					</header>
-					<form id="signupForm" class="s-submit clearfix" action="{{ route ('client.login.submit') }}" method="POST">
+					<form id="loginForm" class="s-submit clearfix" action="{{ route ('client.login.submit') }}" method="POST">
 						{{ csrf_field() }}
 						<div class="row">
 							<div class="col-md-6 col-xs-12">
@@ -68,7 +68,7 @@
 								  border-radius: 30px;
 								  padding-top: 13px;
 								  padding-bottom: 13px;
-								  height:46px;" id="password" placeholder="Password" type="password"  name="password" />
+								  height:46px;"  placeholder="Password" id="password" type="password"  name="password" />
 								</div>
 							</div>
 						</div>

@@ -3,7 +3,7 @@ $(document).ready(function()  {
 		$("#commentForm").validate();
         
                 // validate signup form on keyup and submit
-                $("#signupForm").validate({
+                $("#loginForm").validate({
                     rules: {
                         firstname: "required",
                         lastname: "required",

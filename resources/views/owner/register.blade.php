@@ -1,4 +1,9 @@
 @extends('base')
+
+@section('js')
+<script src="{{ asset('js/loginvalidate.js') }}"></script>
+@endsection
+
 @section('content')
 <section class="b-pageHeader">
 	<div class="container">
@@ -55,17 +60,17 @@
 					<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
 						<h2 class="">CLIENT REGISTERATION</h2>
 					</header>
-					<form class="s-submit clearfix" action="{{ route('owner.register') }}" method="POST">
+					<form id="registerForm" class="s-submit clearfix" action="{{ route('owner.register') }}" method="POST">
 						{{ csrf_field() }}
 						<div class="row">
 							<div class="col-md-6 col-xs-12">
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 									<label>Full Name <span>*</span></label>
-									<input placeholder="NAME" type="text" name="fname" />
+									<input id="fname" placeholder="NAME" type="text" name="fname" />
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 									<label>Email Address <span>*</span></label>
-									<input placeholder="john@example.com" type="text" name="email" required/>
+									<input id="email" placeholder="john@example.com" type="text" name="email" required/>
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 									<label>Phone Number<span>*</span></label>
@@ -100,11 +105,11 @@
 								  border-radius: 30px;
 								  padding-top: 13px;
 								  padding-bottom: 13px;
-								  height:46px;" placeholder="*******" type="password" name="pwd" />
+								  height:46px;" placeholder="*******" type="password" name="password" />
 								</div>
 								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
 									<label>NIC<span>*</span></label>
-									<input placeholder="xxxxxxxxx" type="text" name="nic" />
+									<input placeholder="xxx xxx xxx" type="text" name="nic" />
 								</div>
 							</div>
 						</div>

@@ -1,4 +1,9 @@
 @extends('base')
+
+@section('js')
+<script src="{{ asset('js/loginvalidate.js') }}"></script>
+@endsection
+
 @section('content')
 
 
@@ -125,7 +130,7 @@
 					</div>
 					<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
 						<div class="b-submit__main">
-							<form action="{{ route('submit3.submit') }}" method="post" class='s-submit'>
+							<form id=submitForm action="{{ route('submit3.submit') }}" method="post" class='s-submit'>
                                 {{ csrf_field() }}
 								<div class="b-submit__main-contacts wow zoomInUp" data-wow-delay="0.3s">
 									<header class="s-headerSubmit s-lineDownLeft">

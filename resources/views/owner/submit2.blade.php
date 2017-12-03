@@ -1,4 +1,10 @@
 @extends('base')
+
+@section('js')
+<script src="{{ asset('js/loginvalidate.js') }}"></script>
+@endsection
+
+
 @section('content')
 
 
@@ -125,7 +131,7 @@
 					</div>
 					<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
 						<div class="b-submit__main">
-							<form class="s-submit clearfix" action="{{ route('submit2.submit') }}" method="POST">
+							<form id=submitForm class="s-submit clearfix" action="{{ route('submit2.submit') }}" method="POST">
                                 {{ csrf_field() }}
 								<div class="s-form">
 									<div class="b-submit__main-file">

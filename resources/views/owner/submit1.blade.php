@@ -1,4 +1,10 @@
 @extends('base')
+
+@section('js')
+<script src="{{ asset('js/loginvalidate.js') }}"></script>
+@endsection
+
+
 @section('content')
 
 
@@ -126,7 +132,7 @@
 							<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
 								<h2 class="">Add Your Vehicle Details</h2>
 							</header>
-							<form class="s-submit clearfix" action="{{ route('submit1.submit') }}" method="POST">
+							<form id=submitForm class="s-submit clearfix" action="{{ route('submit1.submit') }}" method="POST">
                                 {{ csrf_field() }}
 								<div class="row">
 									<div class="col-md-6 col-xs-12">
