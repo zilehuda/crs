@@ -26,7 +26,7 @@ class ClientController extends Controller
     $end_date = date('Y-m-d', strtotime($req->end_date));
     $client_id = Auth::user()->id;
     $car_id = session('car_id');
-    return CarBook::create([
+    CarBook::create([
         'client_id' => $client_id,
         'car_id' => $car_id ,
         'status' =>  'pending',

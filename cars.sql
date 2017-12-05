@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 26, 2017 at 12:09 PM
+-- Generation Time: Dec 05, 2017 at 09:37 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -85,32 +85,33 @@ CREATE TABLE `cars` (
   `car_name` varchar(255) NOT NULL,
   `company` text NOT NULL,
   `fuel_type` text NOT NULL,
-  `capacity` int(11) NOT NULL,
-  `chasis_no` int(11) NOT NULL,
+  `capacity` text NOT NULL,
   `ins_no` text NOT NULL,
   `hire_cost` int(11) NOT NULL,
-  `mileage` int(11) NOT NULL,
-  `air_bag` tinyint(1) NOT NULL,
-  `gps` tinyint(1) NOT NULL,
+  `mileage` text NOT NULL,
+  `air_bag` text NOT NULL,
+  `gps` text NOT NULL,
   `reg_no` text NOT NULL,
   `expiry_month` text NOT NULL,
   `expiry_year` text NOT NULL,
   `status` varchar(255) NOT NULL,
   `seller_id` int(11) NOT NULL,
-  `manu_year` int(11) NOT NULL
+  `manu_year` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cars`
 --
 
-INSERT INTO `cars` (`car_id`, `car_name`, `company`, `fuel_type`, `capacity`, `chasis_no`, `ins_no`, `hire_cost`, `mileage`, `air_bag`, `gps`, `reg_no`, `expiry_month`, `expiry_year`, `status`, `seller_id`, `manu_year`) VALUES
-(1, 'Mercedes Benz', '', '', 5, 0, '', 20000, 0, 0, 0, '', '', '', 'Available', 0, 0),
-(2, 'Range Rover', '', '', 6, 0, '', 30000, 0, 0, 0, '', '', '', 'Available', 0, 0),
-(3, 'Harrier', '', '', 6, 0, '', 20000, 0, 0, 0, '', '', '', 'Available', 0, 0),
-(5, 'LandCruiser V8', '', '', 5, 0, '', 20000, 0, 0, 0, '', '', '', 'Available', 0, 0),
-(6, 'Security Vehicles', '', '', 8, 0, '', 30000, 0, 0, 0, '', '', '', 'Available', 0, 0),
-(7, 'Wedding Limousine', '', '', 10, 0, '', 50000, 0, 0, 0, '', '', '', 'Available', 0, 0);
+INSERT INTO `cars` (`car_id`, `car_name`, `company`, `fuel_type`, `capacity`, `ins_no`, `hire_cost`, `mileage`, `air_bag`, `gps`, `reg_no`, `expiry_month`, `expiry_year`, `status`, `seller_id`, `manu_year`) VALUES
+(1, 'Mercedes Benz', '', '', '5', '', 20000, '0', '0', '0', '', '', '', 'Available', 0, '0'),
+(2, 'Range Rover', '', '', '6', '', 30000, '0', '0', '0', '', '', '', 'Available', 0, '0'),
+(3, 'Harrier', '', '', '6', '', 20000, '0', '0', '0', '', '', '', 'Available', 0, '0'),
+(5, 'LandCruiser V8', '', '', '5', '', 20000, '0', '0', '0', '', '', '', 'Available', 0, '0'),
+(6, 'Security Vehicles', '', '', '8', '', 30000, '0', '0', '0', '', '', '', 'Available', 0, '0'),
+(7, 'Wedding Limousine', '', '', '10', '', 50000, '0', '0', '0', '', '', '', 'Available', 0, '0'),
+(8, 'kk', '22', 'gas', 'k', 'kkk', 33, '33', 'yes', 'yes', '3222', 'jan', '2005', 'no', 3, '22lkll'),
+(9, 'k', '1', 'gas', 'kk', 'kk', 22, '222', 'yes', 'yes', '33', 'jan', '2005', 'no', 3, 'kk');
 
 -- --------------------------------------------------------
 
@@ -122,20 +123,24 @@ CREATE TABLE `car_bookin` (
   `client_id` int(11) NOT NULL,
   `car_id` int(11) NOT NULL,
   `status` varchar(250) NOT NULL,
-  `payment` varchar(10) DEFAULT NULL
+  `payment` varchar(10) DEFAULT NULL,
+  `hire_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `car_bookin`
 --
 
-INSERT INTO `car_bookin` (`client_id`, `car_id`, `status`, `payment`) VALUES
-(2, 11, 'Approved', 'paid'),
-(7, 13, 'Pending', 'not'),
-(10, 7, 'Approved', 'not'),
-(10, 11, 'Approved', 'paid'),
-(10, 12, 'Approved', 'paid'),
-(10, 13, 'Pending', 'not');
+INSERT INTO `car_bookin` (`client_id`, `car_id`, `status`, `payment`, `hire_date`, `end_date`) VALUES
+(1, 5, 'pending', 'not', NULL, NULL),
+(2, 11, 'Approved', 'paid', NULL, NULL),
+(7, 13, 'Pending', 'not', NULL, NULL),
+(10, 7, 'Approved', 'not', NULL, NULL),
+(10, 11, 'Approved', 'paid', NULL, NULL),
+(10, 12, 'Approved', 'paid', NULL, NULL),
+(10, 13, 'Pending', 'not', NULL, NULL),
+(15, 1, 'approved', 'not', '2017-12-07', '2017-12-07');
 
 -- --------------------------------------------------------
 
@@ -183,7 +188,8 @@ INSERT INTO `client` (`id`, `fname`, `email`, `password`, `phone`, `city`, `gend
 (11, 'ff', 'ddd', 'ddd', 1234, 'fdfd', 'male', 'dd', NULL),
 (13, 'shayan', 'shayan@shayan.com', '$2y$10$DjcjnztbQqQqtaNXKKcIjutGtJFtQQAlXtNyvvPGcBEz0crIfQoSa', 3434, 'karachi', 'Male', '123456', NULL),
 (14, 'taha', 'taha@taha.com', '$2y$10$y.q1fzVkwJf.x4z/vCM7m.HtJSBB23adoK3IkPuO32IMLHe/PfXTC', 1235, 'karahci', 'Male', '124', NULL),
-(15, 'zilehuda', 'zilehuda@gmail.com', '$2y$10$mmQeA8fKtHnS4IwEgOM6r.Y6MqImtsQAmH.wmYef6M7GGdvApaZX.', 12345, 'karachi', 'male', '12345', 'HVDrYGhXa9ZwUBg4lJEyAY523AMqk7c1yryius9ylUEBqwQKBIdmvcgvvYMf');
+(15, 'zilehuda', 'zilehuda@gmail.com', '$2y$10$mmQeA8fKtHnS4IwEgOM6r.Y6MqImtsQAmH.wmYef6M7GGdvApaZX.', 12345, 'karachi', 'male', '12345', 'Ed2Yo5PXuzkzg2nMTCpuA1cjgjRlQIGItZC8JHN3PPJYNnYUbxMblYMggnvg'),
+(16, 'ando', 'ando@ando.com', '$2y$10$eGF3DULVpObu4M8tsm3I0ub0mag4uuvMWhKe6/x.bfQXd8TR0Con6', 123456, 'karachi', 'Female', '123456', NULL);
 
 -- --------------------------------------------------------
 
@@ -298,7 +304,9 @@ CREATE TABLE `seller` (
 INSERT INTO `seller` (`seller_id`, `fname`, `gender`, `email`, `phone`, `city`, `nic`, `password`) VALUES
 (1, 'pawan', 'Male', 'khatri.pawan22@yahoo.com', 2147483647, '', '', ''),
 (2, 'nothing', 'Male', 'noth@nu.edu.pk', 2147483647, '', '', ''),
-(3, 'zilehuda', 'male', 'zilehuda@gmail.com', 12345, 'karachi', '12345', '$2y$10$BBHB31MjL93SMs1PC1Yo8OU0T67LJAG63noq9G3mf4IUGHxqXQbL.');
+(3, 'zilehuda', 'male', 'zilehuda@gmail.com', 12345, 'karachi', '12345', '$2y$10$BBHB31MjL93SMs1PC1Yo8OU0T67LJAG63noq9G3mf4IUGHxqXQbL.'),
+(4, 'zile', 'Male', 'zile@zile.com', 433434, 'karachi', '34343k', '$2y$10$kUz91W/UHQ3WqS6Xfl3kMOvnUNcI9l8Es5fdUyvW9t99VjyWqIkAu'),
+(5, 'ffkk', 'Male', 'zilehuda@gmail.com', 45454, 'karachi', '45454', '$2y$10$1S5yIs..tUkLXYIxuQbjOO/Kt.cNuj6gtYYlz1Oe4ydZ.jyI2OEM.');
 
 --
 -- Indexes for dumped tables
@@ -382,12 +390,12 @@ ALTER TABLE `caradd`
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `hire`
 --
@@ -402,7 +410,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `seller`
 --
 ALTER TABLE `seller`
-  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
+  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
