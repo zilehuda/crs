@@ -37,8 +37,8 @@
 							<form method="post" action="/">
 								<div class="b-infoBar__select-one wow zoomInUp" data-wow-delay="0.5s">
 									<span class="b-infoBar__select-one-title">SELECT VIEW</span>
-									<a href="listingsTwo.html" class="m-list m-active"><span class="fa fa-list"></span></a>
-									<a href="listTable.html" class="m-table"><span class="fa fa-table"></span></a>
+									<a href="{{ route('available.cars.1') }}" class="m-list"><span class="fa fa-list"></span></a>
+									<a href="{{ route('list.two') }}" class="m-table m-active"><span class="fa fa-table"></span></a>
 								</div>
 								<div class="b-infoBar__select-one wow zoomInUp" data-wow-delay="0.5s">
 									<span class="b-infoBar__select-one-title">SHOW ON PAGE</span>

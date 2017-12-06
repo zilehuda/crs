@@ -16,7 +16,7 @@ class Controller extends BaseController
     public function logout(Request $request) {
       Auth::logout();
       Session::flush();
-      return redirect()->intended(route('home'));
+      return redirect()->intended(route('available.cars.1'));
     }
 
     public function Redirect()
@@ -30,7 +30,7 @@ class Controller extends BaseController
         return redirect()->route('owner.dashboard');
       }
       else {
-        return view('home');
+        return redirect()->intended(route('available.cars.1'));
       }
     }
 

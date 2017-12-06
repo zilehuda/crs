@@ -16,7 +16,7 @@
 
 <div class="b-breadCumbs s-shadow">
 	<div class="container wow zoomInUp" data-wow-delay="0.5s">
-		<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="submit1.html" class="b-breadCumbs__page m-active">Submit a Vehicle</a>
+		<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="submit1.html" class="b-breadCumbs__page m-active">login as owner</a>
 	</div>
 </div><!--b-breadCumbs-->
 
@@ -34,17 +34,30 @@
 							</div>
 
 							<div class="b-submit__aside-step-inner-info">
-								<h4>SIGN IN AS A BUYER</h4>
+								<h4>SIGN IN AS A OWNEr</h4>
 								<div class="b-submit__aside-step-inner-info-triangle"></div>
 							</div>
 						</div>
 					</div>
 				</aside>
 			</div>
+
+			<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
+				@if (Session::has('message'))
+			<div class="alert alert-danger wow zoomInUp" data-wow-delay="0.5s">
+				<p style="text-align: center;" >{{ session('message') }}</p>
+			</div>
+			@endif
+			@if (Session::has('success'))
+		<div class="alert alert-success wow zoomInUp" data-wow-delay="0.5s">
+			<p style="text-align: center;" >{{ session('success') }}</p>
+		</div>
+		@endif
+		</div>
 			<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
 				<div class="b-submit__main">
 					<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
-						<h2 class="">Add Your Vehicle Details</h2>
+						<h2 class="">Login as owner</h2>
 					</header>
 					<form id="loginForm" class="s-submit clearfix" action="{{ route ('owner.login.submit') }}" method="POST">
 						{{ csrf_field() }}

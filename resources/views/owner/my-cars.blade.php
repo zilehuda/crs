@@ -32,7 +32,7 @@
     <thead>
       <tr>
         <th><h5>CAR NAME:</h5></th>
-        <th><h5>Client Name</h5></th>
+        <th><h5>SUBMIT ON</h5></th>
         <th><h5>CAR STATUS:</h5></th>
       </tr>
     </thead>
@@ -40,7 +40,7 @@
 			@foreach($cb as $value)
       <tr>
         <td>{{ $value->car_name }}</td>
-        <td></td>
+        <td>02-01-2016</td>
         <td><a  class="btn m-btn m-infoBtn">{{ $value->status }}<span class="fa fa-angle-right"></span></a></td>
       </tr>
 			@endforeach

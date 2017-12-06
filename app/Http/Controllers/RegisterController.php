@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\client;
 use App\Owner;
 use Illuminate\Support\Facades\Hash;
+use Session;
 class RegisterController extends Controller
 {
   public function __construct()
@@ -16,7 +17,7 @@ class RegisterController extends Controller
 
     public function RegisterClient(Request $req)
     {
-      return client::create([
+       client::create([
           'fname' => $req->fname,
           'email' => $req->email,
           'password' =>  Hash::make($req->pwd),
@@ -25,10 +26,12 @@ class RegisterController extends Controller
           'city' => $req->city,
           'gender' => $req->gender
       ]);
+      Session::flash('success', "Successfully Registered! login to continue");
+      return view('buyer.login');
     }
     public function RegisterOwner(Request $req)
     {
-      return Owner::create([
+      create([
           'fname' => $req->fname,
           'email' => $req->email,
           'password' =>  Hash::make($req->pwd),
@@ -37,5 +40,7 @@ class RegisterController extends Controller
           'city' => $req->city,
           'gender' => $req->gender
       ]);
+      Session::flash('success', "Successfully Registered! login to continue");
+      return redirect()->intended(route('owner.login'));
     }
 }

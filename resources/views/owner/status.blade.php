@@ -32,16 +32,16 @@
     <thead>
       <tr>
         <th><h5>CAR NAME:</h5></th>
-        <th><h5>Client Name</h5></th>
-        <th><h5>CAR STATUS:</h5></th>
+        <th><h5>ClIENT NAME</h5></th>
+        <th><h5>START ON</h5></th>
       </tr>
     </thead>
     <tbody>
 			@foreach($cb as $value)
       <tr>
         <td>{{ $value->car_name }}</td>
-        <td></td>
-        <td><a  class="btn m-btn m-infoBtn">{{ $value->status }}<span class="fa fa-angle-right"></span></a></td>
+        <td>{{ $value->fname }} </td>
+				<td>{{ $value->hire_date }}</td>
       </tr>
 			@endforeach
     </tbody>

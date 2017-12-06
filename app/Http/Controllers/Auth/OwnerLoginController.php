@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 Use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 Use Redirect;
-
+use Session;
 class OwnerLoginController extends Controller
 {
   public function __construct()
@@ -30,10 +30,11 @@ class OwnerLoginController extends Controller
     //return $request->email;
 
 
-    if(Auth::guard('owner')->attempt(['email'=>'zilehuda@gmail.com','password'=>'123456']))
+    if(Auth::guard('owner')->attempt(['email'=>$request->email,'password'=>$request->password]))
     {
       return redirect()->intended(route('owner.dashboard'));
     }
+    Session::flash('success', "Wrong email or password");
     return redirect()->back()->withInput($request->only('email','remember'));
 
   }

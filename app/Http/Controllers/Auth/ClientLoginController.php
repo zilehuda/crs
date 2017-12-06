@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 Use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 Use Redirect;
+use Session;
 
 class ClientLoginController extends Controller
 {
@@ -35,6 +36,7 @@ class ClientLoginController extends Controller
       echo "string";
       return redirect()->intended(route('client.dashboard'));
     }
+    Session::flash('message', "Wrong email or password");
     return redirect()->back()->withInput($request->only('email','remember'));
 
   }

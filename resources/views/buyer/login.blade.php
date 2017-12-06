@@ -30,7 +30,6 @@
 							<div class="b-submit__aside-step-inner-icon">
 								<span class="fa fa-car"></span>
 							</div>
-
 							<div class="b-submit__aside-step-inner-info">
 								<h4>SIGN IN AS A CLIENT</h4>
 								<div class="b-submit__aside-step-inner-info-triangle"></div>
@@ -40,10 +39,23 @@
 				</aside>
 			</div>
 			<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
+				@if (Session::has('message'))
+			<div class="alert alert-danger wow zoomInUp" data-wow-delay="0.5s">
+				<p style="text-align: center;" >{{ session('message') }}</p>
+			</div>
+			@endif
+			@if (Session::has('success'))
+		<div class="alert alert-success wow zoomInUp" data-wow-delay="0.5s">
+			<p style="text-align: center;" >{{ session('success') }}</p>
+		</div>
+		@endif
+		</div>
+			<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
 				<div class="b-submit__main">
 					<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
 						<h2 class="">Login as a Client</h2>
 					</header>
+
 					<form id="loginForm" class="s-submit clearfix" action="{{ route ('client.login.submit') }}" method="POST">
 						{{ csrf_field() }}
 						<div class="row">

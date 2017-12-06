@@ -43,7 +43,7 @@ class CarSubmitController extends Controller
         $car->reg_no = $req->plate_no;
         $car->expiry_month = $req->reg_expm;
         $car->expiry_year = $req->reg_expy;
-        $car->status = 'no';
+        $car->status = 'pending';
         $car->seller_id = Auth::user()->seller_id;
         $car->manu_year = session('manu_year');
         $car->save();

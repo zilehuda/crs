@@ -10,7 +10,7 @@ class CarsController extends Controller
 
     public function GetCarList()
     {
-      $cars = car::paginate('4');
+      $cars = car::where('status','available')->paginate('4');
       return view('listing')->with('cars',$cars);
       # code...
     }

@@ -16,8 +16,7 @@ class ClientController extends Controller
 
   function index()
   {
-
-
+    return redirect()->intended(route('available.cars.1'));
     return view('home');
   }
   public function BookCar(Request $req)
@@ -39,7 +38,7 @@ class ClientController extends Controller
 
     public function ClientStatus()
     {
-    $d =  date('Y-M-D', strtotime($val->regdate));
+  
       $cb = DB::table('car_bookin')
             ->where('car_bookin.client_id','=',Auth::user()->id)
             ->join('cars', 'car_bookin.car_id', '=', 'cars.car_id')

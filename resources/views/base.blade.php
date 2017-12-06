@@ -78,21 +78,17 @@
 							<div class="collapse navbar-collapse navbar-main-slide" id="nav">
 								<ul class="navbar-nav-menu">
 									@if (Auth::guest())
-									<li><a href="login">Home</a></li>
-									<li><a href="login">Available Cars</a></li>
-									<li><a href="login">Comapre</a></li>
-									<li><a href="submit1.html">About</a></li>
-									<li><a href="contacts.html">Contact</a></li>
+									<li><a href="{{ route('available.cars.1') }}">Available Cars</a></li>
 									@elseif(Auth::guard('client')->check())
-									<li><a href="login">Available Cars</a></li>
-									<li><a href="login">My Status</a></li>
-									<li><a href="submit1.html">My Schedule</a></li>
+									<li><a href="{{ route('available.cars.1') }}">Available Cars</a></li>
+									<li><a href="{{ route('client.status') }}">My Status</a></li>
+									<li><a href="{{ route('client.schedule') }}">My Schedule</a></li>
 									<li><a href="login">Comapre</a></li>
 									<li><a href="contacts.html">Contact</a></li>
 									@elseif(Auth::guard('owner')->check())
-									<li><a href="login">My Cars</a></li>
-									<li><a href="login">Add New Car</a></li>
-									<li><a href="login">Car Status</a></li>
+									<li><a href={{ route('owner.my-car') }}>My Cars</a></li>
+									<li><a href="{{ route('submit') }}">Add New Car</a></li>
+									<li><a href="{{ route('owner.status') }}">Car Status</a></li>
 									@endif
 								</ul>
 							</div>
