@@ -7,14 +7,14 @@
 	<div class="container">
 		<h1 class="wow zoomInLeft" data-wow-delay="0.5s">Submit Your Vehicle</h1>
 		<div class="b-pageHeader__search wow zoomInRight" data-wow-delay="0.5s">
-			<h3>Add Your Vehicle In Our Listings</h3>
+			<h3>Login As a Client</h3>
 		</div>
 	</div>
 </section><!--b-pageHeader-->
 
 <div class="b-breadCumbs s-shadow">
 	<div class="container wow zoomInUp" data-wow-delay="0.5s">
-		<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="submit1.html" class="b-breadCumbs__page m-active">Submit a Vehicle</a>
+		<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="submit1.html" class="b-breadCumbs__page m-active">client login</a>
 	</div>
 </div><!--b-breadCumbs-->
 
@@ -32,7 +32,7 @@
 							</div>
 
 							<div class="b-submit__aside-step-inner-info">
-								<h4>SIGN IN AS A BUYER</h4>
+								<h4>SIGN IN AS A CLIENT</h4>
 								<div class="b-submit__aside-step-inner-info-triangle"></div>
 							</div>
 						</div>
@@ -42,7 +42,7 @@
 			<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
 				<div class="b-submit__main">
 					<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
-						<h2 class="">Add Your Vehicle Details</h2>
+						<h2 class="">Login as a Client</h2>
 					</header>
 					<form id="loginForm" class="s-submit clearfix" action="{{ route ('client.login.submit') }}" method="POST">
 						{{ csrf_field() }}

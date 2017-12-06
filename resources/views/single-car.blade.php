@@ -1,4 +1,4 @@
-@extends('base')
+@extends('base')z
 @section('content')
 <section class="b-detail s-shadow">
   <div class="container">
@@ -129,7 +129,7 @@
                   <button type="submit" class="btn m-btn">REGISTER ACCOUNT TO SCHEDULE<span class="fa fa-angle-right"></span></button>
                 </form>
                 @elseif(Auth::guard('client')->check())
-                <form  action="{{ route('book.submit') }}" method="post">
+                <form  action="{{ route('book.submit') }}" method="post" onsubmit="return confirm('Do you really want to book this car ?');">
                   {{ csrf_field() }}
     								<div class="b-submit__main-element wow zoomInUp" data-wow-delay="0.5s">
     									<label >Start Date <span>*</span></label>

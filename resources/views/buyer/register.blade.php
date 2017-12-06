@@ -17,7 +17,7 @@
 
 <div class="b-breadCumbs s-shadow">
 	<div class="container wow zoomInUp" data-wow-delay="0.5s">
-		<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="submit1.html" class="b-breadCumbs__page m-active">Submit a Vehicle</a>
+		<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="submit1.html" class="b-breadCumbs__page m-active">Register</a>
 	</div>
 </div><!--b-breadCumbs-->
 
@@ -44,12 +44,12 @@
 						<h3>REGISTER AS AN OWNER</h3>
 						<div class="b-submit__aside-step-inner clearfix">
 							<div class="b-submit__aside-step-inner-icon">
-								<span class="fa fa-list-ul"></span>
+								<span class="fa fa-car"></span>
 							</div>
 							<a href="#">
 							<div class="b-submit__aside-step-inner-info">
-								<h4>select details</h4>
-								<p>Choose vehicle specifications</p>
+								<h4>Register</h4>
+								<p>as owner</p>
 							</div>
 							</a>
 						</div>

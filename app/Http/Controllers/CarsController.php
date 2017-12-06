@@ -14,6 +14,12 @@ class CarsController extends Controller
       return view('listing')->with('cars',$cars);
       # code...
     }
+    public function GetCarListtwo()
+    {
+      $cars = car::paginate('6');
+      return view('list-two')->with('cars',$cars);
+      # code...
+    }
     public function GetSingleCar($id)
     {
 

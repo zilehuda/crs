@@ -16,6 +16,7 @@ Route::get('dummy',function(){
     echo session('company');
 
 })->name('dummy');
+Route::get('li','CarsController@GetCarListtwo');
 Route::get('submit',function(){
     echo session('company');
 
