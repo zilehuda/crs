@@ -22,6 +22,12 @@ Route::get('submit',function(){
 
 })->name('submit1');
 
+
+Route::group(["prefix"=>"admin"],function(){
+  Route::post('login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+  Route::get('login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+});
+
 Route::group(["prefix"=>"client"],function(){
   Route::post('login', 'Auth\ClientLoginController@login')->name('client.login.submit');
   Route::get('login', 'Auth\ClientLoginController@showLoginForm')->name('client.login');

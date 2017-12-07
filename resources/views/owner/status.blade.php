@@ -16,6 +16,7 @@
 				<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="compare.html" class="b-breadCumbs__page m-active">Compare Vehicles</a>
 			</div>
 		</div><!--b-breadCumbs-->
+		
 
 		<div class="b-infoBar">
 			<div class="container">

@@ -29,6 +29,13 @@
     <section class="b-compare s-shadow">
       <div class="container">
         <table class="table">
+					@if(session('message'))
+					<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
+					<div class="alert alert-success wow zoomInUp" data-wow-delay="0.5s">
+						<p style="text-align: center;">{{ session('message') }}</p>
+					</div>
+				</div>
+				@endif
     <thead>
       <tr>
         <th><h5>CAR NAME:</h5></th>

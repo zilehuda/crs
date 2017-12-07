@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\car;
 use Illuminate\Http\Request;
 use Auth;
+use Session;
 class CarSubmitController extends Controller
 {
     //
@@ -47,7 +48,8 @@ class CarSubmitController extends Controller
         $car->seller_id = Auth::user()->seller_id;
         $car->manu_year = session('manu_year');
         $car->save();
-        return redirect()->intended(route('owner.status'));
+        Session::flash('message', "Car subitted Successfully");
+        return redirect()->intended(route('owner.my-car'));
 
     }
 }

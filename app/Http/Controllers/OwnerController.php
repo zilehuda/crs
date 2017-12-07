@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
+use Session;
 class OwnerController extends Controller
 {
   public function __construct()
@@ -37,6 +38,7 @@ public function ClientStatus()
         ->join('client','car_bookin.client_id','=','client.id')
         ->select('cars.*','car_bookin.*','client.fname')
         ->get();
+
   return view('owner.status')->with('cb',$cb);
 }
 
