@@ -28,13 +28,13 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="b-topBar__addr">
 							<span class="fa fa-map-marker"></span>
-							202 W 7TH ST, LOS ANGELES, CA 90014
+							C-302 Main Shaheed-e-Millat Road,karachi
 						</div>
 					</div>
 					<div class="col-md-2 col-xs-6">
 						<div class="b-topBar__tel">
 							<span class="fa fa-phone"></span>
-							1-800- 624-5462
+							031-5272-5272
 						</div>
 					</div>
 					<div class="col-md-6 col-xs-6">
@@ -83,8 +83,7 @@
 									<li><a href="{{ route('available.cars.1') }}">Available Cars</a></li>
 									<li><a href="{{ route('client.status') }}">My Status</a></li>
 									<li><a href="{{ route('client.schedule') }}">My Schedule</a></li>
-									<li><a href="login">Comapre</a></li>
-									<li><a href="contacts.html">Contact</a></li>
+									
 									@elseif(Auth::guard('owner')->check())
 									<li><a href={{ route('owner.my-car') }}>My Cars</a></li>
 									<li><a href="{{ route('submit') }}">Add New Car</a></li>
@@ -201,20 +200,19 @@
 							<p>contact us</p>
 							<div class="b-info__contacts-item">
 								<span class="fa fa-map-marker"></span>
-								<em>202 W 7th St, Suite 233 Los Angeles,
-									California 90014 USA</em>
+								<em>C-302 Main Shaheed-e-Millat Road,karachi,Pakistan</em>
 							</div>
 							<div class="b-info__contacts-item">
 								<span class="fa fa-phone"></span>
-								<em>Phone:  1-800- 624-5462</em>
+								<em>Phone:  031-5272-5272</em>
 							</div>
 							<div class="b-info__contacts-item">
 								<span class="fa fa-fax"></span>
-								<em>FAX:  1-800- 624-5462</em>
+								<em>FAX:  0092-92-92-315</em>
 							</div>
 							<div class="b-info__contacts-item">
 								<span class="fa fa-envelope"></span>
-								<em>Email:  info@domain.com</em>
+								<em>Email:  info@autoclub.com</em>
 							</div>
 						</address>
 						<address class="b-info__map">

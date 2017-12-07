@@ -11,7 +11,7 @@
 
 		<div class="b-breadCumbs s-shadow">
 			<div class="container wow zoomInUp" data-wow-delay="0.5s">
-				<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="listings.html" class="b-breadCumbs__page m-active">Search Results</a>
+				<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="listings.html" class="b-breadCumbs__page m-active">Available Cars</a>
 			</div>
 		</div><!--b-breadCumbs-->
 
@@ -69,7 +69,7 @@
 							@foreach ($cars as $car)
 							<div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
 								<div class="b-items__cars-one-img">
-									<img src="media/270x230/nissanList.jpg" alt="nissan" />
+									<img src="media/270x230/jaguarList.jpg" alt="jaguar" />
 								</div>
 								<div class="b-items__cars-one-info">
 									<header class="b-items__cars-one-info-header s-lineDownLeft">

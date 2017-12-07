@@ -47,7 +47,7 @@ class CarSubmitController extends Controller
         $car->seller_id = Auth::user()->seller_id;
         $car->manu_year = session('manu_year');
         $car->save();
-        echo session ('company');
+        return redirect()->intended(route('owner.status'));
 
     }
 }

@@ -117,7 +117,7 @@
               <h2 class="s-titleDet">BOOK YOUR SCHEDULE</h2>
               <div class="b-detail__main-aside-about-call">
                 <span class="fa fa-phone"></span>
-                <div>1-888-378-4027</div>
+                <div>031-5272-5272</div>
                 <p>Call the seller 24/7 and they would help you.</p>
               </div>
               <div class="b-detail__main-aside-about-seller">
