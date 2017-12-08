@@ -29,6 +29,11 @@ class RedirectIfAuthenticated
             return redirect()->route('owner.dashboard');
          }
            break;
+      case 'admin':
+        if (Auth::guard($guard)->check()) {
+          return redirect()->route('admin.dashboard');
+       }
+         break;
        default:
        if (Auth::guard($guard)->check()) {
            return redirect()->route('/home');

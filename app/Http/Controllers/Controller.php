@@ -29,6 +29,10 @@ class Controller extends BaseController
       {
         return redirect()->route('owner.dashboard');
       }
+      elseif(Auth::guard('admin')->check())
+      {
+        return redirect()->route('admin.dashboard');
+      }
       else {
         return redirect()->intended(route('available.cars.1'));
       }

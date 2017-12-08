@@ -29,8 +29,8 @@ public function login(Request $request)
 
   if(Auth::guard('admin')->attempt(['email'=>"admin",'password'=>"admin"]))
   {
-    return "string";
-    //return redirect()->intended(route('client.dashboard'));
+
+    return redirect()->intended(route('admin.dashboard'));
   }
   Session::flash('message', "Wrong email or password");
   return redirect()->back()->withInput($request->only('email','remember'));

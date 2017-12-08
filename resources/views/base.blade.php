@@ -47,7 +47,9 @@
 								@elseif (Auth::guard('owner')->check() || Auth::guard('client')->check())
 								<li><a href="{{ route('logout') }}">LOGOUT</a></li>
 								<li><a href="#">{{ Auth::user()->fname }}</a></li>
-
+								@elseif(Auth::guard('admin')->check())
+								<li><a href="{{ route('logout') }}">LOGOUT</a></li>
+									<li><a href="#">{{ Auth::user()->email}}</a></li>
 								@endif
 							</ul>
 						</nav>
@@ -83,11 +85,16 @@
 									<li><a href="{{ route('available.cars.1') }}">Available Cars</a></li>
 									<li><a href="{{ route('client.status') }}">My Status</a></li>
 									<li><a href="{{ route('client.schedule') }}">My Schedule</a></li>
-									
+
 									@elseif(Auth::guard('owner')->check())
 									<li><a href={{ route('owner.my-car') }}>My Cars</a></li>
 									<li><a href="{{ route('submit') }}">Add New Car</a></li>
 									<li><a href="{{ route('owner.status') }}">Car Status</a></li>
+
+									@elseif(Auth::guard('admin')->check())
+									<li><a href={{ route('admin.dashboard') }}>Client Request</a></li>
+									<li><a href="{{ route('car.request') }}">Car Request</a></li>
+									<li><a href="{{ route('car.hired') }}">Hired Cars</a></li>
 									@endif
 								</ul>
 							</div>

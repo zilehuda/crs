@@ -26,6 +26,12 @@ Route::get('submit',function(){
 Route::group(["prefix"=>"admin"],function(){
   Route::post('login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
   Route::get('login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+  Route::get('/','AdminController@index');
+  Route::get('client-request', 'AdminController@ShowClientRequest')->name('admin.dashboard');
+  Route::post('client-request','AdminController@ApproveClientCar')->name('car.approve');
+  Route::get('car-request', 'AdminController@ShowCarRequest')->name('car.request');
+  Route::post('car-request','AdminController@ApproveCar')->name('car.owner.approve');
+  Route::get('hired-cars', 'AdminController@ShowHiredCars')->name('car.hired');
 });
 
 Route::group(["prefix"=>"client"],function(){

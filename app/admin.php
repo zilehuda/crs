@@ -12,7 +12,6 @@ class admin extends Authenticatable
 
     protected $guard = 'admin';
     protected $table = 'admin';
-    protected $primaryKey = 'admin_id';
     public $timestamps = false;
 
 }
