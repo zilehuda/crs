@@ -23,10 +23,11 @@ class CarSubmitController extends Controller
     }
     public function submit2(Request $req)
     {
-
-
-
-        return view('owner.submit3');
+      $file_name = time().'.jpg';
+      $file = $req->file('image');
+      $file->move('uploads',$file_name);
+      session(['image' => "uploads/".$file_name]);
+      return view('owner.submit3');
     }
     public function submit3(Request $req)
     {
@@ -45,6 +46,7 @@ class CarSubmitController extends Controller
         $car->expiry_month = $req->reg_expm;
         $car->expiry_year = $req->reg_expy;
         $car->status = 'pending';
+        $car->image = session('image');
         $car->seller_id = Auth::user()->seller_id;
         $car->manu_year = session('manu_year');
         $car->save();

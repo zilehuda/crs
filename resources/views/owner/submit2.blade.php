@@ -104,20 +104,18 @@
 					</div>
 					<div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
 						<div class="b-submit__main">
-							<form id=submitForm class="s-submit clearfix" action="{{ route('submit2.submit') }}" method="POST">
+							<form enctype="multipart/form-data" id=submitForm class="s-submit clearfix" action="{{ route('submit2.submit') }}" method="POST">
                                 {{ csrf_field() }}
 								<div class="s-form">
 									<div class="b-submit__main-file">
 										<header class="s-headerSubmit s-lineDownLeft wow zoomInUp" data-wow-delay="0.3s">
 											<h2>Upload Your Vehicle Photos</h2>
 										</header>
-										<p class=" wow zoomInUp" data-wow-delay="0.3s">You can upload upto 10 photos of your vehicle here.</p>
 										<label class="b-submit__main-file-label btn m-btn wow zoomInUp" data-wow-delay="0.3s">
-											<input type="file" class="" name="img" />
+											<input type="file" class="" name="image" />
 											<span>CHOOSE A  PHOTO</span>
 											<span class="fa fa-angle-right"></span>
 										</label>
-										<label>Max. file size: 3.5 MB. Allowed images: jpg, gif, png.</label>
 									</div>
 
 								</div>

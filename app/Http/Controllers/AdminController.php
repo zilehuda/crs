@@ -38,6 +38,8 @@ class AdminController extends Controller
     CarBook::where('client_id', $req->client_id)
           ->where('car_id', $req->car_id)
           ->update(['status' => 'approved']);
+
+      return redirect()->route('admin.dashboard');
   }
 
   public function ShowCarRequest()
@@ -52,6 +54,7 @@ class AdminController extends Controller
 
       car::where('car_id', $req->car_id)
         ->update(['status' => 'available']);
+        return redirect()->route('car.request');
     # code...
   }
   public function ShowHiredCars()

@@ -27,37 +27,8 @@
                   <ul class="b-detail__main-info-images-big bxslider enable-bx-slider" data-pager-custom="#bx-pager" data-mode="horizontal" data-pager-slide="true" data-mode-pager="vertical" data-pager-qty="5">
                     <li class="s-relative">
                       <a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-                      <img class="img-responsive center-block" src="media/620x485/big1.jpg" alt="nissan" />
+                      <img class="img-responsive center-block" src="{{ asset($car->image) }}" alt="nissan" />
                     </li>
-                    <li class="s-relative">
-                      <a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-                      <img class="img-responsive center-block" src="media/620x485/big2.jpg" alt="nissan" />
-                    </li>
-                    <li class="s-relative">
-                      <a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-                      <img class="img-responsive center-block" src="media/620x485/big3.jpg" alt="nissan" />
-                    </li>
-                    <li class="s-relative">
-                      <a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-                      <img class="img-responsive center-block" src="media/620x485/big4.jpg" alt="nissan" />
-                    </li>
-                    <li class="s-relative">
-                      <a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-                      <img class="img-responsive center-block" src="media/620x485/big5.jpg" alt="nissan" />
-                    </li>
-                    <li class="s-relative">
-                      <a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-                      <img class="img-responsive center-block" src="media/620x485/big1.jpg" alt="nissan" />
-                    </li>
-                    <li class="s-relative">
-                      <a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-                      <img class="img-responsive center-block" src="media/620x485/big2.jpg" alt="nissan" />
-                    </li>
-                    <li class="s-relative">
-                      <a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-                      <img class="img-responsive center-block" src="media/620x485/big3.jpg" alt="nissan" />
-                    </li>
-
                   </ul>
                 </div>
 
